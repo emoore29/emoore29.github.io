@@ -1,0 +1,12 @@
+defaults:
+  - scope:
+      path: "" # empty string means all files in the project
+      type: "posts"
+    values:
+      layout: "note"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+baseurl: ""

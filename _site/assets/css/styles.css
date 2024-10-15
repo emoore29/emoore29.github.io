@@ -1,0 +1,103 @@
+:root {
+  --max-page-width: 700px;
+  /* The following colors have AAA contrast with white background if font size >18px or 14px and bold */
+  --green: #386837;
+  --purple: #9f4aa5;
+  --visited: #313e31;
+  --background-color: #aecab4;
+}
+
+* {
+  box-sizing: border-box; /* padding included in box sizes not added onto box sizes */
+}
+
+a {
+  color: var(--green);
+}
+
+a:hover {
+  font-style: italic;
+}
+
+a:visited {
+  color: var(--visited);
+}
+
+body {
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: var(--max-page-width);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin: 1rem auto;
+  width: 100%;
+}
+
+#site-title {
+  font-size: 1.5rem;
+  margin: 5px;
+}
+
+#navigation-list {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: baseline;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+}
+
+.nav-link {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.nav-link:visited {
+  color: var(--green);
+}
+
+.current-nav-link {
+  color: var(--purple) !important;
+  text-decoration: underline;
+}
+
+a#site-title-link {
+  color: black;
+  text-decoration: none;
+}
+
+a#site-title-link:hover {
+  font-style: normal;
+}
+
+footer {
+  padding: 4rem 0 1rem 0;
+  text-align: center;
+  margin: auto auto 0 auto;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

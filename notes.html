@@ -1,0 +1,12 @@
+---
+title: Emma Moore | Notes
+permalink: /notes
+---
+
+<ul class="notes-list">
+  {% for note in site.posts %}
+  <li class="note">
+    <a href="{{ note.url }}" class="note-link">{{ note.title }}</a>
+  </li>
+  {% endfor %}
+</ul>

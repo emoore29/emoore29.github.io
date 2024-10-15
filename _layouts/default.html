@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }}</title>
+    <script src="/assets/js/sticky-header.js"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ↓ Fonts ↓ -->
+  </head>
+  <body>
+    <header>
+      <h1 id="site-title">
+        <a id="site-title-link" href="{{ site.baseurl }}">emma moore</a>
+      </h1>
+      {% include navigation.html %}
+    </header>
+    <main class="page-content">{{ content }}</main>
+    <footer>
+      ©
+      <a href="https://github.com/emoore29" target="_blank">Emma Moore</a> {{
+      site.time | date: "%Y" }}
+    </footer>
+  </body>
+</html>
