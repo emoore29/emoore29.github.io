@@ -18,9 +18,19 @@
     </header>
     <main class="page-content">{{ content }}</main>
     <footer>
-      ©
-      <a href="https://github.com/emoore29" target="_blank">Emma Moore</a> {{
-      site.time | date: "%Y" }}
+      <div class="socials">
+        <a target="_blank" href="https://github.com/emoore29">
+          {% include github-icon.html %}
+        </a>
+        <a href="https://www.linkedin.com/in/emoore29" target="_blank">
+          <img
+            id="linked-in-icon"
+            src="/assets/images/icons/linkedInIcon.png"
+            alt="Linkedin icon"
+          />
+        </a>
+      </div>
+      © Emma Moore {{ site.time | date: "%Y" }}
     </footer>
   </body>
 </html>

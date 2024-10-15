@@ -3,7 +3,8 @@
   /* The following colors have AAA contrast with white background if font size >18px or 14px and bold */
   --green: #386837;
   --purple: #9f4aa5;
-  --visited: #313e31;
+  --dark-green: #313e31;
+  --grey: #575757;
   --background-color: #aecab4;
 }
 
@@ -20,7 +21,7 @@ a:hover {
 }
 
 a:visited {
-  color: var(--visited);
+  color: var(--dark-green);
 }
 
 body {
@@ -40,6 +41,11 @@ header {
   padding-bottom: 1rem;
   margin: 1rem auto;
   width: 100%;
+}
+
+h2 {
+  font-size: large;
+  margin-bottom: 0;
 }
 
 #site-title {
@@ -93,11 +99,51 @@ footer {
 .notes-list {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.note-link {
+  text-decoration: none;
 }
 
 .portfolio-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.note-date {
+  margin: 0;
+  font-style: italic;
+  color: var(--grey);
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed var(--grey);
+  color: var(--grey);
+  width: 100%;
+  opacity: 0.5;
+}
+
+#github-icon {
+  height: 27px;
+  display: flex;
+  align-items: center;
+}
+
+#linked-in-icon {
+  width: 30px;
+  height: 27px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 5px;
 }

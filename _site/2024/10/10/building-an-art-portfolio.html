@@ -35,13 +35,10 @@
     </header>
     <main class="page-content"><div class="note-content">
   <h2>Building an Art Portfolio Website with Next.js and Sanity</h2>
-  <p id="note-date">10 Oct 2024</p>
-  <p>In late 2023/early 2024 I built a <a href="https://www.donnapriceart.com/">portfolio website</a> for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.<br />
- <br />
- 
-I didn’t want to have to build out a GUI and/or implement authentication using vanilla HTML, CSS and JavaScript, and Sanity had a generous free plan. I decided to use Sanity as the platform on which my client could update the website content, and Next.js as the framework I used to build the frontend, since I was already familiar with it. Sanity, thankfully, handles the authentication.<br />
- <br />
- </p>
+  <p class="note-date">10 Oct 2024</p>
+  <p>In late 2023/early 2024 I built a <a href="https://www.donnapriceart.com/">portfolio website</a> for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.</p>
+
+<p>I didn’t want to have to build out a GUI and/or implement authentication using vanilla HTML, CSS and JavaScript, and Sanity had a generous free plan. I decided to use Sanity as the platform on which my client could update the website content, and Next.js as the framework I used to build the frontend, since I was already familiar with it. Sanity, thankfully, handles the authentication.</p>
 
 <p>These are the primary guides I used to get started with the project:</p>
 
@@ -56,9 +53,7 @@ I didn’t want to have to build out a GUI and/or implement authentication using
 
 <h4 id="configuring-sanity">Configuring Sanity</h4>
 
-<p>I used the <code class="language-plaintext highlighter-rouge">next-sanity</code> toolkit to mount Sanity Studio to the Next.js application, such that it would be hosted with the Next.js app. I configured the base path as <code class="language-plaintext highlighter-rouge">/studio</code> in <code class="language-plaintext highlighter-rouge">sanity.config.ts</code>, and using Next.js’s App routing, implemented <a href="https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#optional-catch-all-segments">optional catch-all dynamic routes</a> for accessing the various studio pages at <code class="language-plaintext highlighter-rouge">app/(studio)/studio/[[...index]]/page.tsx</code>. This means that the studio will be accessible at https://www.donnapriceart.com/studio/(+ any additional url segments). Those additional segments are created as follows.<br />
-  <br />
-  </p>
+<p>I used the <code class="language-plaintext highlighter-rouge">next-sanity</code> toolkit to mount Sanity Studio to the Next.js application, such that it would be hosted with the Next.js app. I configured the base path as <code class="language-plaintext highlighter-rouge">/studio</code> in <code class="language-plaintext highlighter-rouge">sanity.config.ts</code>, and using Next.js’s App routing, implemented <a href="https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#optional-catch-all-segments">optional catch-all dynamic routes</a> for accessing the various studio pages at <code class="language-plaintext highlighter-rouge">app/(studio)/studio/[[...index]]/page.tsx</code>. This means that the studio will be accessible at https://www.donnapriceart.com/studio/(+ any additional url segments). Those additional segments are created as follows.</p>
 
 <p>The structure of each section that my client can update are defined in the <code class="language-plaintext highlighter-rouge">/schemas</code> directory:</p>
 
@@ -80,95 +75,70 @@ I didn’t want to have to build out a GUI and/or implement authentication using
   <li>/category</li>
   <li>/watercolorMixedMedia</li>
   <li>/oilPaintings</li>
-  <li>/illustrations<br />
- <br />
- </li>
+  <li>/illustrations</li>
 </ul>
 
 <h4 id="groq-graph-relational-object-queries">GROQ (Graph-Relational Object Queries)</h4>
 
-<p>The queries used to retrieve documents from Sanity are defined in the <code class="language-plaintext highlighter-rouge">sanity/sanity.query.ts</code> file. For example, for a given category, the getArtFromCategory query is used:<br />
- <br />
- </p>
+<p>The queries used to retrieve documents from Sanity are defined in the <code class="language-plaintext highlighter-rouge">sanity/sanity.query.ts</code> file. For example, for a given category, the getArtFromCategory query will request art from a category passed in as a parameter via a sanityFetch() function.</p>
 
-<p><code class="language-plaintext highlighter-rouge">sanity/sanity.query.ts</code>:<br />
- <br />
- </p>
+<p>The art can then be passed to a Gallery component, which handles displaying the art, along with the title and description.</p>
 
-<p><code class="language-plaintext highlighter-rouge">export const getArtFromCategory = groq</code>*[_type == “art” &amp;&amp; $slug in category[]-&gt;slug.current] | order(categoryOrder asc, _updatedAt desc){
-_id,
-title,
-slug,
-mainImage {alt, “image”: asset-&gt;url},
-category,
-description
-}<code class="language-plaintext highlighter-rouge">;</code><br />
- <br />
- </p>
-
-<p><code class="language-plaintext highlighter-rouge">app/(home)/[category]/page.tsx</code>:<br />
- <br />
- </p>
-
-<p><code class="language-plaintext highlighter-rouge">const art: ArtType[] = await sanityFetch({
-    query: getArtFromCategory,
-    tags: ["art"],
-    qParams: { slug: params.category },
-  });</code><br />
-  <br />
- </p>
-
-<p>The art can then be passed to a Gallery component, which handles displaying the art, along with the title and description.<br />
- <br />
- </p>
-
-<p>The <code class="language-plaintext highlighter-rouge">sanityFetch()</code> function takes both a query and a tag. This tag is useful for data revalidation.<br />
- <br />
- </p>
+<p>The <code class="language-plaintext highlighter-rouge">sanityFetch()</code> function also takes a tag. This tag is useful for data revalidation.</p>
 
 <h4 id="on-demand-data-revalidation">On-demand data revalidation</h4>
 
-<p>I wanted my client to see their website update any time they made a change in Sanity Studio, so I used on-demand data revalidation to achieve this.<br />
- <br />
- </p>
+<p>I wanted my client to see their website update any time they made a change in Sanity Studio, so I used on-demand data revalidation to achieve this.</p>
 
-<p>On-demand revalidation is the process of purging the data cache and re-fetching the latest content based on an event, as opposed to time-based revalidation, that automatically revalidates after a given amount of time has passed. I’ve used the tag-based approach for this project. See more in the <a href="https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#revalidating-data">Next.js documentation</a>.<br />
- <br />
- </p>
+<p>On-demand revalidation is the process of purging the data cache and re-fetching the latest content based on an event, as opposed to time-based revalidation, that automatically revalidates after a given amount of time has passed. I’ve used the tag-based approach for this project. See more in the <a href="https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#revalidating-data">Next.js documentation</a>.</p>
 
-<p>Since the data coming from Sanity has been tagged after fetching it, revalidateTag() is used to revalidate all entries associated with a given tag. In Sanity settings, I created a webhook that triggers when Sanity Studio content changes, and this triggers a POST request to be sent to an API endpoint in my Next.js app. A secret URI is shared between Vercel, where the site is hosted, and Sanity.<br />
- <br />
- </p>
+<p>Since the data coming from Sanity has been tagged after fetching it, revalidateTag() is used to revalidate all entries associated with a given tag. In Sanity settings, I created a webhook that triggers when Sanity Studio content changes, and this triggers a POST request to be sent to an API endpoint in my Next.js app. A secret URI is shared between Vercel, where the site is hosted, and Sanity.</p>
 
-<p>This ultimately causes the revalidateTag() function provided by Next.js to run, and any data on the server that was previously tagged with the same tag sent in the POST request from Sanity will be revalidated.<br />
- <br />
- </p>
+<p>This ultimately causes the revalidateTag() function provided by Next.js to run, and any data on the server that was previously tagged with the same tag sent in the POST request from Sanity will be revalidated.</p>
 
 <h4 id="routing">Routing</h4>
 
-<p>I used the (home) and (studio) route groups to organise and separate the pages for the studio and the main website. This allowed me to add a root layout for the main website, as well as a root layout for the studio. This was useful because the main website needed a header and additional styling that I didn’t want in the studio.<br />
- <br />
- </p>
+<p>I used the (home) and (studio) route groups to organise and separate the pages for the studio and the main website. This allowed me to add a root layout for the main website, as well as a root layout for the studio. This was useful because the main website needed a header and additional styling that I didn’t want in the studio.</p>
 
-<p>The about page and contact page are defined like so: <code class="language-plaintext highlighter-rouge">app/(home)/about/page.tsx</code> and <code class="language-plaintext highlighter-rouge">app/(home)/contact/page.tsx</code>.<br />
- <br />
- </p>
+<p>The about page and contact page are defined like so: <code class="language-plaintext highlighter-rouge">app/(home)/about/page.tsx</code> and <code class="language-plaintext highlighter-rouge">app/(home)/contact/page.tsx</code>.</p>
 
-<p>For the home page, all art is retrieved and displayed in the gallery.<br />
- <br />
- </p>
+<p>For the home page, all art is retrieved and displayed in the gallery.</p>
 
-<p>The category pages are generated with dynamic routing: <code class="language-plaintext highlighter-rouge">app/(home)/[category]/page.tsx</code>, where each category of art is retrieved using a getCategories GROQ query. The categories are also passed to the navigation component. This way, if my client decides they want to add a new category, they can, and the website will automatically update to include the new category as a route linked in the navigation.<br />
- <br />
- </p>
+<p>The category pages are generated with dynamic routing: <code class="language-plaintext highlighter-rouge">app/(home)/[category]/page.tsx</code>, where each category of art is retrieved using a getCategories GROQ query. The categories are also passed to the navigation component. This way, if my client decides they want to add a new category, they can, and the website will automatically update to include the new category as a route linked in the navigation.</p>
 
 <p>The art for a given category is then retrieved as described above in the GROQ example code.</p>
 
 </div>
 </main>
     <footer>
-      ©
-      <a href="https://github.com/emoore29" target="_blank">Emma Moore</a> 2024
+      <div class="socials">
+        <a target="_blank" href="https://github.com/emoore29">
+          <div id="github-icon">
+  <svg
+    width="auto"
+    height="100%"
+    viewBox="0 0 98 96"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+      fill="#24292f"
+    />
+  </svg>
+</div>
+
+        </a>
+        <a href="https://www.linkedin.com/in/emoore29" target="_blank">
+          <img
+            id="linked-in-icon"
+            src="/assets/images/icons/linkedInIcon.png"
+            alt="Linkedin icon"
+          />
+        </a>
+      </div>
+      © Emma Moore 2024
     </footer>
   </body>
 </html>

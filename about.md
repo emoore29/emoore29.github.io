@@ -1,6 +1,6 @@
 ---
 layout: default
-title: about
+title: Emma Moore | About
 permalink: /about
 ---
 
