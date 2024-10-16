@@ -4,6 +4,9 @@
         <li>
           <a href="{{ item.link }}"{% if page.url == item.link %} class="nav-link current-nav-link"{% else %} class="nav-link" {% endif %}>{{ item.name }}</a>
         </li>
+        {% unless forloop.last %}
+        /
+      {% endunless %}
       {% endfor %}
   </ul>
 </nav>

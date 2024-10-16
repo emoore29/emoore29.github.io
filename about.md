@@ -1,6 +1,6 @@
 ---
 layout: default
-title: emoore/about
+title: emoore / about
 permalink: /about
 ---
 
@@ -12,7 +12,7 @@ Previously, I completed a BA in Professional Writing and Publishing at Curtin Un
 
 In 2022, I decided to learn how to code. I wasn't feeling inspired by my editing career and wanted a new challenge. I loved maths in high school and wanted to experience the satisfying feeling of solving challenging problems again.
 
-I started with some free courses on freeCodeCamp and learned HTML, CSS, JavaScript, Python, and more. I started building various websites with React-based frameworks and self-studying things like logic gates and computer networking.
+I started with some free courses on freeCodeCamp and learned HTML, CSS, JavaScript, Python, and more. I started building various websites with React-based frameworks and self-studying things like logic gates and networking.
 
 I wanted to expand my experience and improve my foundational understanding of computer science, so I decided to pursue a more formal education, which brings me to where I am now. I'm estimated to complete my Graduate Diploma by late 2025.
 
