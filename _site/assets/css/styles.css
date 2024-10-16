@@ -1,5 +1,5 @@
 :root {
-  --max-page-width: 700px;
+  --max-page-width: 500px;
   /* The following colors have AAA contrast with white background if font size >18px or 14px and bold */
   --green: #386837;
   --purple: #9f4aa5;
@@ -32,6 +32,13 @@ body {
   min-height: 100vh;
   max-width: var(--max-page-width);
   font-family: "Afacad Flux", sans-serif;
+}
+
+.center {
+  margin: 20px 0;
+  border: 5px solid honeydew;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 img {
@@ -147,8 +154,8 @@ hr {
 }
 
 .socials {
-  display: flex;
-  justify-content: center;
+  list-style-type: none;
+  padding-left: 0;
   gap: 5px;
   margin-bottom: 5px;
 }

@@ -16,27 +16,14 @@
     />
   </head>
   <body>
-    <header>
-      <h1 id="site-title">
-        <a id="site-title-link" href="{{ site.baseurl }}">emma moore</a>
-      </h1>
-      {% include navigation.html %}
-    </header>
-    <main class="page-content">{{ content }}</main>
-    <footer>
-      <div class="socials">
-        <a target="_blank" href="https://github.com/emoore29">
-          {% include github-icon.html %}
-        </a>
-        <a href="https://www.linkedin.com/in/emoore29" target="_blank">
-          <img
-            id="linked-in-icon"
-            src="/assets/images/icons/linkedInIcon.png"
-            alt="Linkedin icon"
-          />
-        </a>
-      </div>
-      © Emma Moore {{ site.time | date: "%Y" }}
-    </footer>
+    <div class="center">
+      <header>
+        <h1 id="site-title">
+          <a id="site-title-link" href="{{ site.baseurl }}/">emma moore</a>
+        </h1>
+        {% include navigation.html %}
+      </header>
+      <main class="page-content">{{ content }}</main>
+    </div>
   </body>
 </html>

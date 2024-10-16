@@ -11,3 +11,5 @@ I started building various websites with React-based frameworks (you can view so
 Although I've worked in the editing field for the past several years, since starting my hobby, I'm much more drawn to building things and solving problems with code.
 
 I wanted to expand my experience and improve my foundational understanding of computer science, so I decided to pursue a more formal education. I'm currently completing a Graduate Diploma in Information Technology, estimated to finish by September 2025.
+
+{% include links.html %}

@@ -1,6 +1,6 @@
 - name: about
   link: /about
-- name: my work
-  link: /portfolio
+- name: projects
+  link: /projects
 - name: notes
   link: /notes
