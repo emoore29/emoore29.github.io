@@ -1,10 +1,10 @@
 :root {
   --max-page-width: 500px;
   /* The following colors have AAA contrast with white background if font size >18px or 14px and bold */
-  --green: #275126;
+  --green: #386837;
   --accent: #e7f1e6;
-  --purple: #6c3371;
-  --dark-green: #1a241a;
+  --purple: #9f4aa5;
+  --dark-green: #232c23;
   --grey: #575757;
   --background-color: #ffffff;
 }
@@ -141,7 +141,7 @@ footer {
 
 .note-link {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 450;
 }
 
 .portfolio-list {
