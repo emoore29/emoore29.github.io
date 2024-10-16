@@ -1,15 +1,21 @@
 ---
 layout: default
-title: Emma Moore | About
+title: emoore/about
 permalink: /about
 ---
 
-Hi! I'm Emma, and I live in Perth, Western Australia. I started coding in 2022 as a hobby. I did some free courses with freeCodeCamp and learned HTML, CSS, JavaScript, Python, and more.
+Hi! I'm Emma. I'm a student at the University of New England, completing a Graduate Diploma in Information Technology.
 
-I started building various websites with React-based frameworks (you can view some of these projects at [my work]({{site.url}}), and/or [my GitHub profile](https://github.com/emoore29)) and self-studying things like logic gates and computer networking.
+#### my background
 
-Although I've worked in the editing field for the past several years, since starting my hobby, I'm much more drawn to building things and solving problems with code.
+Previously, I completed a BA in Professional Writing and Publishing at Curtin University. I've worked in the editing field for the last five years.
 
-I wanted to expand my experience and improve my foundational understanding of computer science, so I decided to pursue a more formal education. I'm currently completing a Graduate Diploma in Information Technology, estimated to finish by September 2025.
+In 2022, I decided to learn how to code. I wasn't feeling inspired by my editing career and wanted a new challenge. I loved maths in high school and wanted to experience the satisfying feeling of solving challenging problems again.
+
+I started with some free courses on freeCodeCamp and learned HTML, CSS, JavaScript, Python, and more. I started building various websites with React-based frameworks and self-studying things like logic gates and computer networking.
+
+I wanted to expand my experience and improve my foundational understanding of computer science, so I decided to pursue a more formal education, which brings me to where I am now. I'm estimated to complete my Graduate Diploma by late 2025.
+
+#### links/contact
 
 {% include links.html %}

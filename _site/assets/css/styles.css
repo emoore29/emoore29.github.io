@@ -1,11 +1,12 @@
 :root {
   --max-page-width: 500px;
   /* The following colors have AAA contrast with white background if font size >18px or 14px and bold */
-  --green: #386837;
-  --purple: #9f4aa5;
-  --dark-green: #313e31;
+  --green: #275126;
+  --accent: #e7f1e6;
+  --purple: #6c3371;
+  --dark-green: #1a241a;
   --grey: #575757;
-  --background-color: #aecab4;
+  --background-color: #ffffff;
 }
 
 * {
@@ -25,19 +26,25 @@ a:visited {
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   padding: 10px;
+  font-family: "Afacad Flux", sans-serif;
+  background-color: var(--accent);
+}
+
+.container {
+  border-radius: 10px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: 100vh;
-  max-width: var(--max-page-width);
-  font-family: "Afacad Flux", sans-serif;
+  background-color: var(--background-color);
 }
 
 .center {
+  max-width: var(--max-page-width);
   margin: 20px 0;
-  border: 5px solid honeydew;
-  border-radius: 10px;
   padding: 20px;
 }
 
@@ -58,6 +65,22 @@ header {
 h2 {
   font-size: large;
   margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 30px 0 5px 0;
+  text-transform: lowercase;
+}
+
+.portfolio-list h4 {
+  margin-top: 15px;
+}
+
+p {
+  margin: 5px 0 15px 0;
 }
 
 #site-title {
@@ -118,6 +141,7 @@ footer {
 
 .note-link {
   text-decoration: none;
+  font-weight: 500;
 }
 
 .portfolio-list {
@@ -132,6 +156,7 @@ footer {
   margin: 0;
   font-style: italic;
   color: var(--grey);
+  font-size: small;
 }
 
 hr {
@@ -154,8 +179,8 @@ hr {
 }
 
 .socials {
-  list-style-type: none;
+  list-style-position: inside;
   padding-left: 0;
   gap: 5px;
-  margin-bottom: 5px;
+  margin: 5px 0;
 }

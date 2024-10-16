@@ -1,14 +1,13 @@
 ---
-title: emoore | notes
+title: emoore/notes
 permalink: /notes
 ---
 
 <ul class="notes-list">
   {% for note in site.posts %}
   <li class="note">
-    <a href="{{ note.url }}" class="note-link">{{ note.title }}</a>
+    <a href="{{ note.url }}" class="note-link">{{ note.title | downcase}}</a>
     <p class="note-date">{{ note.date | date_to_string }}</p>
   </li>
-  <hr />
   {% endfor %}
 </ul>
