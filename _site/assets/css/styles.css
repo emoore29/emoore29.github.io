@@ -1,5 +1,8 @@
 :root {
   --max-page-width: 500px;
+}
+
+html[data-theme="light"] {
   --green: #386837;
   --accent: #e7f1e6;
   --purple: #9f4aa5;
@@ -10,7 +13,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  html[data-theme="dark"] {
     --green: #81ae93;
     --accent: #e7f1e6;
     --purple: #cf9ed4;
@@ -32,7 +35,7 @@
 }
 
 * {
-  box-sizing: border-box; /* padding included in box sizes not added onto box sizes */
+  box-sizing: border-box;
   color: var(--text);
 }
 

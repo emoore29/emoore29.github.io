@@ -13,50 +13,81 @@ const sun = `<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="100%" 
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
 </svg>`;
 
-if (currentBackgroundColor === "#f8f8f8") {
-  toggleButton.innerHTML = sun;
-  localStorage.setItem("theme", "light");
+// Check system preference for theme
+let darkPreference = window.matchMedia("(prefers-color-scheme: dark)");
+console.log("user prefers dark mode: ", darkPreference.matches);
+
+let theme = localStorage.getItem("theme");
+
+// If no theme is stored, set the theme based on system preference
+if (!theme) {
+  console.log("no theme stored in local storage");
+  if (!darkPreference.matches) {
+    toggleButton.innerHTML = sun;
+    document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+  } else {
+    toggleButton.innerHTML = moon;
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+  }
 } else {
-  toggleButton.innerHTML = moon;
-  localStorage.setItem("theme", "dark");
+  // If theme is stored, set theme based on stored value
+  if (theme === "light") {
+    toggleButton.innerHTML = sun;
+    document.documentElement.setAttribute("data-theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    toggleButton.innerHTML = moon;
+  }
 }
 
+// Listen for user clicking theme toggler
 toggleButton.addEventListener("click", () => {
   theme = localStorage.getItem("theme");
 
   if (theme === "light") {
-    setDarkTheme();
-  } else if (theme === "dark") {
-    setLightTheme();
+    dark();
+  } else {
+    light();
   }
 });
 
-function setDarkTheme() {
-  // Change btn to moon
-  toggleButton.innerHTML = moon;
-
-  // Set theme to dark in local storage
+function dark() {
   localStorage.setItem("theme", "dark");
-
-  // Update colors
-  document.documentElement.style.setProperty("--green", "#81ae93");
-  document.documentElement.style.setProperty("--accent", "#e7f1e6");
-  document.documentElement.style.setProperty("--purple", "#cf9ed4");
-  document.documentElement.style.setProperty("--grey", "#f8f8f8");
-
-  document.documentElement.style.setProperty("--background-color", "#1e1e1f");
-  document.documentElement.style.setProperty("--text", "#fff");
+  document.documentElement.setAttribute("data-theme", "dark");
+  toggleButton.innerHTML = moon;
 }
 
-function setLightTheme() {
-  toggleButton.innerHTML = sun;
+function light() {
   localStorage.setItem("theme", "light");
-
-  document.documentElement.style.setProperty("--green", "#386837");
-  document.documentElement.style.setProperty("--accent", "#e7f1e6");
-  document.documentElement.style.setProperty("--purple", "#9f4aa5");
-  document.documentElement.style.setProperty("--grey", "#575757");
-
-  document.documentElement.style.setProperty("--background-color", "#f8f8f8");
-  document.documentElement.style.setProperty("--text", "#000");
+  toggleButton.innerHTML = sun;
+  document.documentElement.setAttribute("data-theme", "light");
 }
+
+// function setDarkTheme() {
+//   toggleButton.innerHTML = moon;
+//   localStorage.setItem("theme", "dark");
+
+//   // Update colors
+//   document.documentElement.style.setProperty("--green", "#81ae93");
+//   document.documentElement.style.setProperty("--accent", "#e7f1e6");
+//   document.documentElement.style.setProperty("--purple", "#cf9ed4");
+//   document.documentElement.style.setProperty("--grey", "#f8f8f8");
+
+//   document.documentElement.style.setProperty("--background-color", "#1e1e1f");
+//   document.documentElement.style.setProperty("--text", "#fff");
+// }
+
+// function setLightTheme() {
+//   toggleButton.innerHTML = sun;
+//   localStorage.setItem("theme", "light");
+
+//   document.documentElement.style.setProperty("--green", "#386837");
+//   document.documentElement.style.setProperty("--accent", "#e7f1e6");
+//   document.documentElement.style.setProperty("--purple", "#9f4aa5");
+//   document.documentElement.style.setProperty("--grey", "#575757");
+
+//   document.documentElement.style.setProperty("--background-color", "#f8f8f8");
+//   document.documentElement.style.setProperty("--text", "#000");
+// }
