@@ -31,6 +31,11 @@ body {
   flex-direction: column;
   min-height: 100vh;
   max-width: var(--max-page-width);
+  font-family: "Afacad Flux", sans-serif;
+}
+
+img {
+  max-width: 100%;
 }
 
 header {

@@ -14,7 +14,7 @@ These are the primary guides I used to get started with the project:
 
 I've created this flowchart to provide an overview of how the website works (right click and open in a new tab for a larger view):
 
-![Flowchart overview of website architecture.](/images/dpa-flowchart.png)
+![Flowchart overview of website architecture.]({{site.url}}/assets/images/dpa/dpa-flowchart.png)
 
 #### Configuring Sanity
 
