@@ -15,35 +15,48 @@ const sun = `<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="100%" 
 
 if (currentBackgroundColor === "#f8f8f8") {
   toggleButton.innerHTML = sun;
-  localStorage.setItem("darkTheme", false);
+  localStorage.setItem("theme", "light");
 } else {
   toggleButton.innerHTML = moon;
-  localStorage.setItem("darkTheme", true);
+  localStorage.setItem("theme", "dark");
 }
 
-let darkTheme = localStorage.getItem("darkTheme") === "true";
-
 toggleButton.addEventListener("click", () => {
-  console.log("button clicked");
-  if (!darkTheme) {
-    // Switch to dark theme
-    toggleButton.innerHTML = moon;
-    document.documentElement.style.setProperty("--green", "#81ae93");
-    document.documentElement.style.setProperty("--accent", "#e7f1e6");
-    document.documentElement.style.setProperty("--purple", "#cf9ed4");
-    document.documentElement.style.setProperty("--background-color", "#1e1e1f");
-    document.documentElement.style.setProperty("--text", "#fff");
-    darkTheme = true;
-  } else {
-    // Switch to light theme
-    document.documentElement.style.setProperty("--green", "#386837");
-    document.documentElement.style.setProperty("--accent", "#e7f1e6");
-    document.documentElement.style.setProperty("--purple", "#9f4aa5");
-    document.documentElement.style.setProperty("--background-color", "#f8f8f8");
-    document.documentElement.style.setProperty("--text", "#000");
-    toggleButton.innerHTML = sun;
-    darkTheme = false;
+  theme = localStorage.getItem("theme");
+
+  if (theme === "light") {
+    setDarkTheme();
+  } else if (theme === "dark") {
+    setLightTheme();
   }
 });
 
-console.log("running theme");
+function setDarkTheme() {
+  // Change btn to moon
+  toggleButton.innerHTML = moon;
+
+  // Set theme to dark in local storage
+  localStorage.setItem("theme", "dark");
+
+  // Update colors
+  document.documentElement.style.setProperty("--green", "#81ae93");
+  document.documentElement.style.setProperty("--accent", "#e7f1e6");
+  document.documentElement.style.setProperty("--purple", "#cf9ed4");
+  document.documentElement.style.setProperty("--grey", "#f8f8f8");
+
+  document.documentElement.style.setProperty("--background-color", "#1e1e1f");
+  document.documentElement.style.setProperty("--text", "#fff");
+}
+
+function setLightTheme() {
+  toggleButton.innerHTML = sun;
+  localStorage.setItem("theme", "light");
+
+  document.documentElement.style.setProperty("--green", "#386837");
+  document.documentElement.style.setProperty("--accent", "#e7f1e6");
+  document.documentElement.style.setProperty("--purple", "#9f4aa5");
+  document.documentElement.style.setProperty("--grey", "#575757");
+
+  document.documentElement.style.setProperty("--background-color", "#f8f8f8");
+  document.documentElement.style.setProperty("--text", "#000");
+}

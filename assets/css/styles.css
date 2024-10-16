@@ -81,7 +81,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1rem;
+  padding-bottom: 15px;
   margin: 0 auto;
   width: 100%;
 }
