@@ -1,5 +1,9 @@
 :root {
-  --max-page-width: 500px;
+  --max-page-width: 600px;
+}
+
+html {
+  font-size: 18px;
 }
 
 html[data-theme="light"] {
@@ -25,7 +29,7 @@ html[data-theme="light"] {
 }
 
 #theme-toggle {
-  height: 25px;
+  height: 28px;
   background-color: var(--background-color);
   border: none;
   cursor: pointer;
@@ -41,10 +45,11 @@ html[data-theme="light"] {
 
 a {
   color: var(--green);
+  text-decoration: none;
 }
 
 a:hover {
-  font-style: italic;
+  text-decoration: underline;
 }
 
 a:visited {
