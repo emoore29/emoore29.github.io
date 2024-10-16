@@ -1,16 +1,39 @@
 :root {
   --max-page-width: 500px;
-  /* The following colors have AAA contrast with white background if font size >18px or 14px and bold */
   --green: #386837;
   --accent: #e7f1e6;
   --purple: #9f4aa5;
   --dark-green: #232c23;
   --grey: #575757;
   --background-color: #f8f8f8;
+  --text: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --green: #81ae93;
+    --accent: #e7f1e6;
+    --purple: #cf9ed4;
+    --dark-green: #232c23;
+    --grey: #f8f8f8;
+    --background-color: #1e1e1f;
+    --text: #fff;
+  }
+}
+
+#theme-toggle {
+  height: 25px;
+  background-color: var(--background-color);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 * {
   box-sizing: border-box; /* padding included in box sizes not added onto box sizes */
+  color: var(--text);
 }
 
 a {
@@ -119,7 +142,7 @@ nav {
 }
 
 a#site-title-link {
-  color: black;
+  color: var(--text);
   text-decoration: none;
 }
 
