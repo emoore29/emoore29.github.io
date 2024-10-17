@@ -14,6 +14,7 @@ html[data-theme="light"] {
   --grey: #575757;
   --background-color: #f8f8f8;
   --text: #000;
+  --pink: #b93673;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +26,7 @@ html[data-theme="light"] {
     --grey: #f8f8f8;
     --background-color: #1e1e1f;
     --text: #fff;
+    --pink: #b93673;
   }
 }
 
@@ -217,3 +219,106 @@ hr {
   gap: 5px;
   margin: 5px 0;
 }
+
+a:active,
+.nav-link:active {
+  color: var(--pink);
+}
+
+/* .star {
+  z-index: -1;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  position: absolute;
+  fill: var(--grey);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.star:nth-child(3n + 3) {
+  fill: #b93673;
+}
+
+.star:nth-child(5n + 5) {
+  fill: #3d47b2;
+}
+
+@keyframes float1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-10px, 10px) scale(1.2);
+  }
+  100% {
+    transform: translate(10px, -10px) scale(1);
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-10px, 10px) scale(1.2);
+  }
+  100% {
+    transform: translate(10px, -10px) scale(1);
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes float3 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-10px, 10px) scale(1.2);
+  }
+  100% {
+    transform: translate(10px, -10px) scale(1);
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes fade1 {
+  0%,
+  100% {
+    opacity: 0;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    opacity: 0;
+  }
+}
+@keyframes fade2 {
+  0% {
+    opacity: 0;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.2;
+    opacity: 0.7;
+  }
+}
+@keyframes fade3 {
+  0% {
+    opacity: 0.5;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    opacity: 0;
+  }
+} */

@@ -15,13 +15,11 @@ const sun = `<svg xmlns="http://www.w3.org/2000/svg" width="auto" height="100%" 
 
 // Check system preference for theme
 let darkPreference = window.matchMedia("(prefers-color-scheme: dark)");
-console.log("user prefers dark mode: ", darkPreference.matches);
 
 let theme = localStorage.getItem("theme");
 
 // If no theme is stored, set the theme based on system preference
 if (!theme) {
-  console.log("no theme stored in local storage");
   if (!darkPreference.matches) {
     toggleButton.innerHTML = sun;
     document.documentElement.setAttribute("data-theme", "light");
