@@ -1,5 +1,5 @@
 ---
-title: "Lessons in cross-browser testing, column-count, display, and more"
+title: "Cross-Browser Testing, Column-Count, Display, and More"
 date: 2023-11-18
 ---
 

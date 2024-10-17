@@ -6,7 +6,7 @@ permalink: /about
 
 Hi! I'm Emma. I'm a student at the [University of New England](https://www.une.edu.au/), completing a Graduate Diploma in Information Technology.
 
-#### my background
+#### My Background
 
 Previously, I completed a BA in Professional Writing and Publishing at [Curtin University](https://www.curtin.edu.au/). I've worked in the editing field for the last five years.
 
@@ -16,6 +16,6 @@ I started with some free courses on [freeCodeCamp](https://www.freecodecamp.org/
 
 I wanted to expand my experience and improve my foundational understanding of computer science, so I decided to pursue a more formal education, which brings me to where I am now. I'm estimated to complete my Graduate Diploma by late 2025.
 
-#### links/contact
+#### Links/Contact
 
 {% include links.html %}

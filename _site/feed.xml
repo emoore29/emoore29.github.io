@@ -1,20 +1,236 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-17T13:57:19+08:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Logic gates: The Building Blocks of Computers</title><link href="http://localhost:4000/2024/10/17/logic-gates.html" rel="alternate" type="text/html" title="Logic gates: The Building Blocks of Computers" /><published>2024-10-17T00:00:00+08:00</published><updated>2024-10-17T00:00:00+08:00</updated><id>http://localhost:4000/2024/10/17/logic-gates</id><content type="html" xml:base="http://localhost:4000/2024/10/17/logic-gates.html"><![CDATA[<p>These are my summary notes based on reading the book <a href="https://www.amazon.com.au/But-How-Know-Principles-Computers-ebook/dp/B00F25LEVC"><em>But How Do It Know?</em> by J. Clark Scott</a>, and I have linked any other resources I used to supplement my understanding.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-17T20:12:18+08:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Computer Principles Part 1: Logic Gates</title><link href="http://localhost:4000/2024/10/17/logic-gates.html" rel="alternate" type="text/html" title="Computer Principles Part 1: Logic Gates" /><published>2024-10-17T00:00:00+08:00</published><updated>2024-10-17T00:00:00+08:00</updated><id>http://localhost:4000/2024/10/17/logic-gates</id><content type="html" xml:base="http://localhost:4000/2024/10/17/logic-gates.html"><![CDATA[<p>These are my summary notes based on reading the book <a href="https://www.amazon.com.au/But-How-Know-Principles-Computers-ebook/dp/B00F25LEVC"><em>But How Do It Know?</em> by J. Clark Scott</a>. If I’ve used any other resources, I’ll link them where appropriate. I’ve broken the notes down into multiple parts. Part 1 is an introduction to logic gates.</p>
 
 <h4 id="logic-gates">Logic Gates</h4>
 
 <p>Logic gates are small electrical circuits wired in such a way as to process binary inputs into a binary output. To do this, they use transistors, which are basically electronic switches that can be turned on or off.</p>
 
-<p>Here is an example circuit for a NAND gate:</p>
+<p>I’ll only show a couple of the electrical circuits, since it’s not necessary to understand the electronics to understand how the gates are used to build a computer.</p>
 
-<p><img src="http://localhost:4000/assets/images/logic-gates/nand-electrical-circuit.png" alt="NAND gate electrical circuit" />
-<em><a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Electronic/trangate.html#c3">Hyperphysics</a></em></p>
+<h4 id="and-gate">AND gate</h4>
 
-<p>It’s not necessary to understand the electronics to understand how a gate like this can be used to build a computer. Therefore, the above is often simplified into the following diagram:</p>
+<p>AND gate electrical circuit:</p>
 
-<p><img src="http://localhost:4000/assets/images/logic-gates/nand-gate.png" alt="NAND gate" />
-<em>Created with <a href="https://online.visual-paradigm.com/diagrams/features/logic-diagram-software/">Visual Paradigm Online</a></em></p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/and-circuit.png" alt="AND gate electrical circuit" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><em><a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Electronic/trangate.html#c3">Hyperphysics</a></em></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>There are many other types of logic gates. In <em>But How Do It Know?</em>, the author shows how to create these other gates from a NAND gate.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[These are my summary notes based on reading the book But How Do It Know? by J. Clark Scott, and I have linked any other resources I used to supplement my understanding.]]></summary></entry><entry><title type="html">Building an Art Portfolio Website with Next.js and Sanity</title><link href="http://localhost:4000/2024/10/10/building-an-art-portfolio.html" rel="alternate" type="text/html" title="Building an Art Portfolio Website with Next.js and Sanity" /><published>2024-10-10T00:00:00+08:00</published><updated>2024-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2024/10/10/building-an-art-portfolio</id><content type="html" xml:base="http://localhost:4000/2024/10/10/building-an-art-portfolio.html"><![CDATA[<p>In late 2023/early 2024 I built a <a href="https://www.donnapriceart.com/">portfolio website</a> for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.</p>
+<p>The above can be simplified into the following diagram:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/and-gate.png" alt="AND gate" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><em>Sourced from <a href="https://en.wikipedia.org/wiki/Logic_gate">Wikipedia</a></em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For Q to be on, A and B must both be on. Any other combinations will result in Q being off:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>Q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="nand-gate">NAND gate</h4>
+
+<p>A NAND gate is so named because it is a negative AND gate. Inputs A and B must both be on for the output, C, to be off.</p>
+
+<p>Electrical circuit:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/nand-electrical-circuit.png" alt="NAND gate electrical circuit" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Electronic/trangate.html#c3">Hyperphysics</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Simplified diagram:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/nand-gate.png" alt="NAND gate" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://www.amazon.com.au/But-How-Know-Principles-Computers-ebook/dp/B00F25LEVC">But How Do It Know?</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Possible combinations:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Gates can be combined to create other types of gates:</p>
+
+<p>An AND gate can be created by combining a NAND gate with a NOT gate:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/and-combination.png" alt="Combination to create AND" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://www.amazon.com.au/But-How-Know-Principles-Computers-ebook/dp/B00F25LEVC">But How Do It Know?</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>An OR gate can be made by combining two NOT gates with a NAND gate:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/or-combination.png" alt="Combination to create OR" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://www.amazon.com.au/But-How-Know-Principles-Computers-ebook/dp/B00F25LEVC">But How Do It Know?</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A XOR gate can be made by combining two NOT gates with three NAND gates.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/xor-combination.png" alt="Combination to create XOR" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://www.amazon.com.au/But-How-Know-Principles-Computers-ebook/dp/B00F25LEVC">But How Do It Know?</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>However, these gates can also be made directly with transistors, which is much more efficient for building modern computers. Here’s a transistor OR gate, which is a bit simpler than the OR combination above:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/or-circuit.png" alt="OR gate electrical circuit" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Electronic/trangate.html#c3">Hyperphysics</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Here are the simplified diagrams of the main gates discussed in <em>But How Do It Know?</em>:</p>
+
+<p>To start building the parts that make up a computer, these gates can be connected in various ways to create more complicated logic.</p>
+
+<p>In part 2, I’ll go through an example from <em>But How Do It Know?</em> that shows how NAND gates can be combined to make computer memory.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[These are my summary notes based on reading the book But How Do It Know? by J. Clark Scott. If I’ve used any other resources, I’ll link them where appropriate. I’ve broken the notes down into multiple parts. Part 1 is an introduction to logic gates.]]></summary></entry><entry><title type="html">Building an Art Portfolio Website with Next.js and Sanity</title><link href="http://localhost:4000/2024/10/10/building-an-art-portfolio.html" rel="alternate" type="text/html" title="Building an Art Portfolio Website with Next.js and Sanity" /><published>2024-10-10T00:00:00+08:00</published><updated>2024-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2024/10/10/building-an-art-portfolio</id><content type="html" xml:base="http://localhost:4000/2024/10/10/building-an-art-portfolio.html"><![CDATA[<p>In late 2023/early 2024 I built a <a href="https://www.donnapriceart.com/">portfolio website</a> for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.</p>
 
 <p>I didn’t want to have to build out a GUI and/or implement authentication using vanilla HTML, CSS and JavaScript, and Sanity had a generous free plan. I decided to use Sanity as the platform on which my client could update the website content, and Next.js as the framework I used to build the frontend, since I was already familiar with it. Sanity, thankfully, handles the authentication.</p>
 
@@ -84,7 +300,7 @@
 
 <p>The category pages are generated with dynamic routing: <code class="language-plaintext highlighter-rouge">app/(home)/[category]/page.tsx</code>, where each category of art is retrieved using a getCategories GROQ query. The categories are also passed to the navigation component. This way, if my client decides they want to add a new category, they can, and the website will automatically update to include the new category as a route linked in the navigation.</p>
 
-<p>The art for a given category is then retrieved as described above in the GROQ example code.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[In late 2023/early 2024 I built a portfolio website for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.]]></summary></entry><entry><title type="html">Lessons in cross-browser testing, column-count, display, and more</title><link href="http://localhost:4000/2023/11/18/column-count-testing.html" rel="alternate" type="text/html" title="Lessons in cross-browser testing, column-count, display, and more" /><published>2023-11-18T00:00:00+08:00</published><updated>2023-11-18T00:00:00+08:00</updated><id>http://localhost:4000/2023/11/18/column-count-testing</id><content type="html" xml:base="http://localhost:4000/2023/11/18/column-count-testing.html"><![CDATA[<p>I recently came across unexpected behaviour of columns I had created using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-count">column-count CSS property</a>.</p>
+<p>The art for a given category is then retrieved as described above in the GROQ example code.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[In late 2023/early 2024 I built a portfolio website for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.]]></summary></entry><entry><title type="html">Cross-Browser Testing, Column-Count, Display, and More</title><link href="http://localhost:4000/2023/11/18/column-count-testing.html" rel="alternate" type="text/html" title="Cross-Browser Testing, Column-Count, Display, and More" /><published>2023-11-18T00:00:00+08:00</published><updated>2023-11-18T00:00:00+08:00</updated><id>http://localhost:4000/2023/11/18/column-count-testing</id><content type="html" xml:base="http://localhost:4000/2023/11/18/column-count-testing.html"><![CDATA[<p>I recently came across unexpected behaviour of columns I had created using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-count">column-count CSS property</a>.</p>
 
 <p>The short version is that I had used the map() Javascript method to map images*, which would be arranged into two columns. I set “column-count: 2” on the parent container of the images. This is an easy way to create the masonry effect that is common on websites like Pinterest, with the downside being that someone tabbing through the images with a keyboard will have to look through them top to bottom, left to right, instead of left to right, top to bottom.</p>
 
