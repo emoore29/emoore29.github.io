@@ -1,10 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-17T20:12:18+08:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Computer Principles Part 1: Logic Gates</title><link href="http://localhost:4000/2024/10/17/logic-gates.html" rel="alternate" type="text/html" title="Computer Principles Part 1: Logic Gates" /><published>2024-10-17T00:00:00+08:00</published><updated>2024-10-17T00:00:00+08:00</updated><id>http://localhost:4000/2024/10/17/logic-gates</id><content type="html" xml:base="http://localhost:4000/2024/10/17/logic-gates.html"><![CDATA[<p>These are my summary notes based on reading the book <a href="https://www.amazon.com.au/But-How-Know-Principles-Computers-ebook/dp/B00F25LEVC"><em>But How Do It Know?</em> by J. Clark Scott</a>. If I’ve used any other resources, I’ll link them where appropriate. I’ve broken the notes down into multiple parts. Part 1 is an introduction to logic gates.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-18T15:47:19+08:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Computer Principles Part 1: Logic Gates</title><link href="http://localhost:4000/2024/10/17/logic-gates.html" rel="alternate" type="text/html" title="Computer Principles Part 1: Logic Gates" /><published>2024-10-17T00:00:00+08:00</published><updated>2024-10-17T00:00:00+08:00</updated><id>http://localhost:4000/2024/10/17/logic-gates</id><content type="html" xml:base="http://localhost:4000/2024/10/17/logic-gates.html"><![CDATA[<p>These are my summary notes based on reading the book <a href="https://www.amazon.com.au/But-How-Know-Principles-Computers-ebook/dp/B00F25LEVC"><em>But How Do It Know?</em> by J. Clark Scott</a>. If I’ve used any other resources, I’ll link them where appropriate. I’ve broken the notes down into multiple parts. Part 1 is an introduction to logic gates.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">. . .</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="logic-gates">Logic Gates</h4>
 
 <p>Logic gates are small electrical circuits wired in such a way as to process binary inputs into a binary output. To do this, they use transistors, which are basically electronic switches that can be turned on or off.</p>
 
-<p>I’ll only show a couple of the electrical circuits, since it’s not necessary to understand the electronics to understand how the gates are used to build a computer.</p>
+<p>I’ll only show a couple of the electrical circuits, since it’s not necessary to understand the electronics to understand how the gates are used to build a computer. I think the AND gate is one of the easiest to understand.</p>
 
 <h4 id="and-gate">AND gate</h4>
 
@@ -39,19 +52,19 @@
       <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/and-gate.png" alt="AND gate" /></td>
     </tr>
     <tr>
-      <td style="text-align: center"><em>Sourced from <a href="https://en.wikipedia.org/wiki/Logic_gate">Wikipedia</a></em></td>
+      <td style="text-align: center"><a href="https://www.amazon.com.au/But-How-Know-Principles-Computers-ebook/dp/B00F25LEVC">But How Do It Know?</a></td>
     </tr>
   </tbody>
 </table>
 
-<p>For Q to be on, A and B must both be on. Any other combinations will result in Q being off:</p>
+<p>For C to be on, A and B must both be on. Any other combinations will result in Q being off:</p>
 
 <table>
   <thead>
     <tr>
       <th>A</th>
       <th>B</th>
-      <th>Q</th>
+      <th>C</th>
     </tr>
   </thead>
   <tbody>
@@ -80,7 +93,7 @@
 
 <h4 id="nand-gate">NAND gate</h4>
 
-<p>A NAND gate is so named because it is a negative AND gate. Inputs A and B must both be on for the output, C, to be off.</p>
+<p>A NAND gate is so named because it is a negative AND gate. So the C output will be the opposite of an AND gate. Inputs A and B must both be on for the output, C, to be off.</p>
 
 <p>Electrical circuit:</p>
 
@@ -208,7 +221,69 @@
   </tbody>
 </table>
 
-<p>However, these gates can also be made directly with transistors, which is much more efficient for building modern computers. Here’s a transistor OR gate, which is a bit simpler than the OR combination above:</p>
+<p>Let’s look at one combination for the XOR gate (the second row in the table below):</p>
+
+<ul>
+  <li>When A is off, C will be on (NOT gate)</li>
+  <li>When B is on, D will be off (NOT gate)</li>
+  <li>When A is off and D is off, F will be on (NAND gate)</li>
+  <li>When B is on and C is on, E will be off (NAND gate)</li>
+  <li>When E is off and F is on, G will be on (NAND gate)</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th>E</th>
+      <th>F</th>
+      <th>G</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td><strong>0</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>0</strong></td>
+      <td><strong>0</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>1</strong></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You can start to see how logic gates can be combined in various ways to start building out a computer. However, these gates can also be made directly with transistors, which is much more efficient for building modern computers. Here’s a transistor OR gate, which is a bit simpler than combining two NOT gates and a NAND gate:</p>
 
 <table>
   <thead>
@@ -226,7 +301,41 @@
   </tbody>
 </table>
 
+<h4 id="summary">Summary</h4>
+
 <p>Here are the simplified diagrams of the main gates discussed in <em>But How Do It Know?</em>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">AND</th>
+      <th style="text-align: center">NOT</th>
+      <th style="text-align: center">NAND</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/and-gate.png" alt="AND gate" /></td>
+      <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/not-gate.png" alt="NOT gate" /></td>
+      <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/nand-gate.png" alt="NAND gate" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">OR</th>
+      <th style="text-align: center">XOR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/or-gate.png" alt="OR gate" /></td>
+      <td style="text-align: center"><img src="http://localhost:4000/assets/images/logic-gates/xor-gate.png" alt="NOT gate" /></td>
+    </tr>
+  </tbody>
+</table>
 
 <p>To start building the parts that make up a computer, these gates can be connected in various ways to create more complicated logic.</p>
 
@@ -308,7 +417,7 @@
 
 <p>I didn’t want to have to redeploy my website every time I was testing a potential solution. So I discovered that I could run a local development server on my PC and access it from another device. I was using Gatsby, and all I had to do was specify the host to be my IP address when I ran gatsby develop; for example: “gatsby develop –host=192.168.1.2”. Then I could open the development website on the iPad I was seeing the issue on and start troubleshooting.</p>
 
-<p>Although this was helpful for testing on the specific device I had at hand, the iPad mini, I wanted to see what other devices had the same problem. I found <a href="https://www.browserstack.com/">BrowserStack</a> and, unfortunately, due to their limited free trial, only had 1 minute to test the site on various devices and would also need to set up a way to view the development site. This was starting to feel unneccessarily complicated, so I ultimately created <a href="https://emoore29.github.io/Column-Count-Tester/">this webpage</a> to let me quickly view the page on various devices/browsers and see if the columns looked different. I’ve explained what I found there.</p>
+<p>Although this was helpful for testing on the specific device I had at hand, the iPad mini, I wanted to see what other devices had the same problem. I found <a href="https://www.browserstack.com/">BrowserStack</a> and, unfortunately, due to their limited free trial, only had 1 minute to test the site on various devices and would also need to set up a way to view the development site. This was starting to feel unneccessarily complicated, so I ultimately created <a href="https://emoore29.github.io/column-count-tester/">this webpage</a> to let me quickly view the page on various devices/browsers and see if the columns looked different. I’ve explained what I found there.</p>
 
 <p>In summary, this was a useful lesson in being precise with my CSS styles, a valuable refresher on the behaviour CSS of “display” property types, and a reminder that just because it looks right on my screen, it might not look right on another.</p>
 
