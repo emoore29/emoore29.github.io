@@ -4,22 +4,61 @@
     <meta charset="utf-8" />
     <title>Building an Art Portfolio Website with Next.js and Sanity</title>
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /> <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Building an Art Portfolio Website with Next.js and Sanity</title>
-<meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Building an Art Portfolio Website with Next.js and Sanity" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="In late 2023/early 2024 I built a portfolio website for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work." />
-<meta property="og:description" content="In late 2023/early 2024 I built a portfolio website for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work." />
-<link rel="canonical" href="http://localhost:4000/2024/10/10/building-an-art-portfolio.html" />
-<meta property="og:url" content="http://localhost:4000/2024/10/10/building-an-art-portfolio.html" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-10-10T00:00:00+08:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Building an Art Portfolio Website with Next.js and Sanity" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-10-10T00:00:00+08:00","datePublished":"2024-10-10T00:00:00+08:00","description":"In late 2023/early 2024 I built a portfolio website for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.","headline":"Building an Art Portfolio Website with Next.js and Sanity","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2024/10/10/building-an-art-portfolio.html"},"url":"http://localhost:4000/2024/10/10/building-an-art-portfolio.html"}</script>
-<!-- End Jekyll SEO tag -->
+    <link
+      type="application/atom+xml"
+      rel="alternate"
+      href="http://localhost:4000/feed.xml"
+    />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Building an Art Portfolio Website with Next.js and Sanity</title>
+    <meta name="generator" content="Jekyll v4.3.4" />
+    <meta
+      property="og:title"
+      content="Building an Art Portfolio Website with Next.js and Sanity"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      name="description"
+      content="In late 2023/early 2024 I built a portfolio website for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work."
+    />
+    <meta
+      property="og:description"
+      content="In late 2023/early 2024 I built a portfolio website for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work."
+    />
+    <link
+      rel="canonical"
+      href="http://localhost:4000/2024/10/10/building-an-art-portfolio.html"
+    />
+    <meta
+      property="og:url"
+      content="http://localhost:4000/2024/10/10/building-an-art-portfolio.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="article:published_time"
+      content="2024-10-10T00:00:00+08:00"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      property="twitter:title"
+      content="Building an Art Portfolio Website with Next.js and Sanity"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "dateModified": "2024-10-10T00:00:00+08:00",
+        "datePublished": "2024-10-10T00:00:00+08:00",
+        "description": "In late 2023/early 2024 I built a portfolio website for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.",
+        "headline": "Building an Art Portfolio Website with Next.js and Sanity",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "http://localhost:4000/2024/10/10/building-an-art-portfolio.html"
+        },
+        "url": "http://localhost:4000/2024/10/10/building-an-art-portfolio.html"
+      }
+    </script>
+    <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ↓ Fonts ↓ -->
@@ -39,111 +78,304 @@
             <a id="site-title-link" href="/">emma moore</a>
           </h1>
           <nav>
-  <ul id="navigation-list">
-      
-        <li>
-          <a href="/about" class="nav-link" >about</a>
-        </li>
-        
-        /
-      
-      
-        <li>
-          <a href="/projects" class="nav-link" >projects</a>
-        </li>
-        
-        /
-      
-      
-        <li>
-          <a href="/notes" class="nav-link" >notes</a>
-        </li>
-        
-      
-  </ul>
-</nav>
+            <ul id="navigation-list">
+              <li>
+                <a href="/about" class="nav-link">about</a>
+              </li>
 
+              /
+
+              <li>
+                <a href="/projects" class="nav-link">projects</a>
+              </li>
+
+              /
+
+              <li>
+                <a href="/notes" class="nav-link">notes</a>
+              </li>
+            </ul>
+          </nav>
         </header>
         <main class="page-content">
           <div class="note-content">
-  <div class="note-header">
-    <h4>Building an Art Portfolio Website with Next.js and Sanity</h4>
-    <p class="note-date">10 Oct 2024</p>
-  </div>
+            <div class="note-header">
+              <h4>Building an Art Portfolio Website with Next.js and Sanity</h4>
+              <p class="note-date">10 Oct 2024</p>
+            </div>
 
-  <p>In late 2023/early 2024 I built a <a href="https://www.donnapriceart.com/">portfolio website</a> for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.</p>
+            <p>
+              In late 2023/early 2024 I built a
+              <a href="https://www.donnapriceart.com/">portfolio website</a> for
+              an artist. My client had no technical skills, didn’t want to be
+              locked into paying subscription fees for CMSs such as Wordpress or
+              Wix, and had a custom design in mind. They also wanted to be able
+              to update the website themselves and not have to go through me
+              every time they wanted to add or remove a photo of their work.
+            </p>
 
-<p>I didn’t want to have to build out a GUI and/or implement authentication using vanilla HTML, CSS and JavaScript, and Sanity had a generous free plan. I decided to use Sanity as the platform on which my client could update the website content, and Next.js as the framework I used to build the frontend, since I was already familiar with it. Sanity, thankfully, handles the authentication.</p>
+            <p>
+              I didn’t want to have to build out a GUI and/or implement
+              authentication using vanilla HTML, CSS and JavaScript, and Sanity
+              had a generous free plan. I decided to use Sanity as the platform
+              on which my client could update the website content, and Next.js
+              as the framework I used to build the frontend, since I was already
+              familiar with it. Sanity, thankfully, handles the authentication.
+            </p>
 
-<p>These are the primary guides I used to get started with the project:</p>
+            <p>
+              These are the primary guides I used to get started with the
+              project:
+            </p>
 
-<ul>
-  <li><a href="https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-sanity-and-nextjs/#heading-what-is-sanity">How to Build a Portfolio Site with Sanity and Next.js</a></li>
-  <li><a href="https://www.sanity.io/guides/sanity-webhooks-and-on-demand-revalidation-in-nextjs">Sanity Webhooks and On-demand Revalidation in Nextjs</a></li>
-</ul>
+            <ul>
+              <li>
+                <a
+                  href="https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-sanity-and-nextjs/#heading-what-is-sanity"
+                  >How to Build a Portfolio Site with Sanity and Next.js</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.sanity.io/guides/sanity-webhooks-and-on-demand-revalidation-in-nextjs"
+                  >Sanity Webhooks and On-demand Revalidation in Nextjs</a
+                >
+              </li>
+            </ul>
 
-<p>I’ve created this flowchart to provide an overview of how the website works (right click and open in a new tab for a larger view):</p>
+            <p>
+              I’ve created this flowchart to provide an overview of how the
+              website works (right click and open in a new tab for a larger
+              view):
+            </p>
 
-<p><img src="http://localhost:4000/assets/images/dpa/dpa-flowchart.png" alt="Flowchart overview of website architecture." /></p>
+            <p>
+              <img
+                src="http://localhost:4000/assets/images/dpa/dpa-flowchart.png"
+                alt="Flowchart overview of website architecture."
+              />
+            </p>
 
-<h4 id="configuring-sanity">Configuring Sanity</h4>
+            <h4 id="configuring-sanity">Configuring Sanity</h4>
 
-<p>I used the <code class="language-plaintext highlighter-rouge">next-sanity</code> toolkit to mount Sanity Studio to the Next.js application, such that it would be hosted with the Next.js app. I configured the base path as <code class="language-plaintext highlighter-rouge">/studio</code> in <code class="language-plaintext highlighter-rouge">sanity.config.ts</code>, and using Next.js’s App routing, implemented <a href="https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#optional-catch-all-segments">optional catch-all dynamic routes</a> for accessing the various studio pages at <code class="language-plaintext highlighter-rouge">app/(studio)/studio/[[...index]]/page.tsx</code>. This means that the studio will be accessible at https://www.donnapriceart.com/studio/(+ any additional url segments). Those additional segments are created as follows.</p>
+            <p>
+              I used the
+              <code class="language-plaintext highlighter-rouge"
+                >next-sanity</code
+              >
+              toolkit to mount Sanity Studio to the Next.js application, such
+              that it would be hosted with the Next.js app. I configured the
+              base path as
+              <code class="language-plaintext highlighter-rouge">/studio</code>
+              in
+              <code class="language-plaintext highlighter-rouge"
+                >sanity.config.ts</code
+              >, and using Next.js’s App routing, implemented
+              <a
+                href="https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#optional-catch-all-segments"
+                >optional catch-all dynamic routes</a
+              >
+              for accessing the various studio pages at
+              <code class="language-plaintext highlighter-rouge"
+                >app/(studio)/studio/[[...index]]/page.tsx</code
+              >. This means that the studio will be accessible at
+              https://www.donnapriceart.com/studio/(+ any additional url
+              segments). Those additional segments are created as follows.
+            </p>
 
-<p>The structure of each section that my client can update are defined in the <code class="language-plaintext highlighter-rouge">/schemas</code> directory:</p>
+            <p>
+              The structure of each section that my client can update are
+              defined in the
+              <code class="language-plaintext highlighter-rouge">/schemas</code>
+              directory:
+            </p>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">about.ts</code> - defines the structure of the about page, including a page title, slug, image, and description field</li>
-  <li><code class="language-plaintext highlighter-rouge">art.ts</code> - defines the structure of an art document, including a title, slug, main image, category, and description</li>
-  <li><code class="language-plaintext highlighter-rouge">category.ts</code> - defines the categories of art, with a title, slug, description, and order field</li>
-  <li><code class="language-plaintext highlighter-rouge">blockContent.ts</code> - defines rich text fields that can be used in other fields, for example, descriptions</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">index.ts</code></strong> - schemaTypes is defined for import into <code class="language-plaintext highlighter-rouge">sanity.config.ts</code> (including all of the above schemas), which makes them available to the studio route.</li>
-</ul>
+            <ul>
+              <li>
+                <code class="language-plaintext highlighter-rouge"
+                  >about.ts</code
+                >
+                - defines the structure of the about page, including a page
+                title, slug, image, and description field
+              </li>
+              <li>
+                <code class="language-plaintext highlighter-rouge">art.ts</code>
+                - defines the structure of an art document, including a title,
+                slug, main image, category, and description
+              </li>
+              <li>
+                <code class="language-plaintext highlighter-rouge"
+                  >category.ts</code
+                >
+                - defines the categories of art, with a title, slug,
+                description, and order field
+              </li>
+              <li>
+                <code class="language-plaintext highlighter-rouge"
+                  >blockContent.ts</code
+                >
+                - defines rich text fields that can be used in other fields, for
+                example, descriptions
+              </li>
+              <li>
+                <strong
+                  ><code class="language-plaintext highlighter-rouge"
+                    >index.ts</code
+                  ></strong
+                >
+                - schemaTypes is defined for import into
+                <code class="language-plaintext highlighter-rouge"
+                  >sanity.config.ts</code
+                >
+                (including all of the above schemas), which makes them available
+                to the studio route.
+              </li>
+            </ul>
 
-<p>I also have a <code class="language-plaintext highlighter-rouge">deskStructure.js</code> file in which art is grouped based on its category so that my client can easily view their art in the studio based on category: this is added to <code class="language-plaintext highlighter-rouge">sanity.config.ts</code> via the <code class="language-plaintext highlighter-rouge">desk-tool</code> plugin.</p>
+            <p>
+              I also have a
+              <code class="language-plaintext highlighter-rouge"
+                >deskStructure.js</code
+              >
+              file in which art is grouped based on its category so that my
+              client can easily view their art in the studio based on category:
+              this is added to
+              <code class="language-plaintext highlighter-rouge"
+                >sanity.config.ts</code
+              >
+              via the
+              <code class="language-plaintext highlighter-rouge"
+                >desk-tool</code
+              >
+              plugin.
+            </p>
 
-<p>Therefore, the following url segments are accessible at https://www.donnapriceart.com/studio/structure, where my client can manage their website content:</p>
+            <p>
+              Therefore, the following url segments are accessible at
+              https://www.donnapriceart.com/studio/structure, where my client
+              can manage their website content:
+            </p>
 
-<ul>
-  <li>/art</li>
-  <li>/about</li>
-  <li>/category</li>
-  <li>/watercolorMixedMedia</li>
-  <li>/oilPaintings</li>
-  <li>/illustrations</li>
-</ul>
+            <ul>
+              <li>/art</li>
+              <li>/about</li>
+              <li>/category</li>
+              <li>/watercolorMixedMedia</li>
+              <li>/oilPaintings</li>
+              <li>/illustrations</li>
+            </ul>
 
-<h4 id="groq-graph-relational-object-queries">GROQ (Graph-Relational Object Queries)</h4>
+            <h4 id="groq-graph-relational-object-queries">
+              GROQ (Graph-Relational Object Queries)
+            </h4>
 
-<p>The queries used to retrieve documents from Sanity are defined in the <code class="language-plaintext highlighter-rouge">sanity/sanity.query.ts</code> file. For example, for a given category, the getArtFromCategory query will request art from a category passed in as a parameter via a sanityFetch() function.</p>
+            <p>
+              The queries used to retrieve documents from Sanity are defined in
+              the
+              <code class="language-plaintext highlighter-rouge"
+                >sanity/sanity.query.ts</code
+              >
+              file. For example, for a given category, the getArtFromCategory
+              query will request art from a category passed in as a parameter
+              via a sanityFetch() function.
+            </p>
 
-<p>The art can then be passed to a Gallery component, which handles displaying the art, along with the title and description.</p>
+            <p>
+              The art can then be passed to a Gallery component, which handles
+              displaying the art, along with the title and description.
+            </p>
 
-<p>The <code class="language-plaintext highlighter-rouge">sanityFetch()</code> function also takes a tag. This tag is useful for data revalidation.</p>
+            <p>
+              The
+              <code class="language-plaintext highlighter-rouge"
+                >sanityFetch()</code
+              >
+              function also takes a tag. This tag is useful for data
+              revalidation.
+            </p>
 
-<h4 id="on-demand-data-revalidation">On-demand data revalidation</h4>
+            <h4 id="on-demand-data-revalidation">
+              On-demand data revalidation
+            </h4>
 
-<p>I wanted my client to see their website update any time they made a change in Sanity Studio, so I used on-demand data revalidation to achieve this.</p>
+            <p>
+              I wanted my client to see their website update any time they made
+              a change in Sanity Studio, so I used on-demand data revalidation
+              to achieve this.
+            </p>
 
-<p>On-demand revalidation is the process of purging the data cache and re-fetching the latest content based on an event, as opposed to time-based revalidation, that automatically revalidates after a given amount of time has passed. I’ve used the tag-based approach for this project. See more in the <a href="https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#revalidating-data">Next.js documentation</a>.</p>
+            <p>
+              On-demand revalidation is the process of purging the data cache
+              and re-fetching the latest content based on an event, as opposed
+              to time-based revalidation, that automatically revalidates after a
+              given amount of time has passed. I’ve used the tag-based approach
+              for this project. See more in the
+              <a
+                href="https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#revalidating-data"
+                >Next.js documentation</a
+              >.
+            </p>
 
-<p>Since the data coming from Sanity has been tagged after fetching it, revalidateTag() is used to revalidate all entries associated with a given tag. In Sanity settings, I created a webhook that triggers when Sanity Studio content changes, and this triggers a POST request to be sent to an API endpoint in my Next.js app. A secret URI is shared between Vercel, where the site is hosted, and Sanity.</p>
+            <p>
+              Since the data coming from Sanity has been tagged after fetching
+              it, revalidateTag() is used to revalidate all entries associated
+              with a given tag. In Sanity settings, I created a webhook that
+              triggers when Sanity Studio content changes, and this triggers a
+              POST request to be sent to an API endpoint in my Next.js app. A
+              secret URI is shared between Vercel, where the site is hosted, and
+              Sanity.
+            </p>
 
-<p>This ultimately causes the revalidateTag() function provided by Next.js to run, and any data on the server that was previously tagged with the same tag sent in the POST request from Sanity will be revalidated.</p>
+            <p>
+              This ultimately causes the revalidateTag() function provided by
+              Next.js to run, and any data on the server that was previously
+              tagged with the same tag sent in the POST request from Sanity will
+              be revalidated.
+            </p>
 
-<h4 id="routing">Routing</h4>
+            <h4 id="routing">Routing</h4>
 
-<p>I used the (home) and (studio) route groups to organise and separate the pages for the studio and the main website. This allowed me to add a root layout for the main website, as well as a root layout for the studio. This was useful because the main website needed a header and additional styling that I didn’t want in the studio.</p>
+            <p>
+              I used the (home) and (studio) route groups to organise and
+              separate the pages for the studio and the main website. This
+              allowed me to add a root layout for the main website, as well as a
+              root layout for the studio. This was useful because the main
+              website needed a header and additional styling that I didn’t want
+              in the studio.
+            </p>
 
-<p>The about page and contact page are defined like so: <code class="language-plaintext highlighter-rouge">app/(home)/about/page.tsx</code> and <code class="language-plaintext highlighter-rouge">app/(home)/contact/page.tsx</code>.</p>
+            <p>
+              The about page and contact page are defined like so:
+              <code class="language-plaintext highlighter-rouge"
+                >app/(home)/about/page.tsx</code
+              >
+              and
+              <code class="language-plaintext highlighter-rouge"
+                >app/(home)/contact/page.tsx</code
+              >.
+            </p>
 
-<p>For the home page, all art is retrieved and displayed in the gallery.</p>
+            <p>
+              For the home page, all art is retrieved and displayed in the
+              gallery.
+            </p>
 
-<p>The category pages are generated with dynamic routing: <code class="language-plaintext highlighter-rouge">app/(home)/[category]/page.tsx</code>, where each category of art is retrieved using a getCategories GROQ query. The categories are also passed to the navigation component. This way, if my client decides they want to add a new category, they can, and the website will automatically update to include the new category as a route linked in the navigation.</p>
+            <p>
+              The category pages are generated with dynamic routing:
+              <code class="language-plaintext highlighter-rouge"
+                >app/(home)/[category]/page.tsx</code
+              >, where each category of art is retrieved using a getCategories
+              GROQ query. The categories are also passed to the navigation
+              component. This way, if my client decides they want to add a new
+              category, they can, and the website will automatically update to
+              include the new category as a route linked in the navigation.
+            </p>
 
-<p>The art for a given category is then retrieved as described above in the GROQ example code.</p>
-
-</div>
+            <p>
+              The art for a given category is then retrieved as described above
+              in the GROQ example code.
+            </p>
+          </div>
 
           <p style="text-align: center; margin-top: 30px">. . .</p>
         </main>
