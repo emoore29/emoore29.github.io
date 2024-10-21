@@ -3,7 +3,7 @@ title: "Computer Principles Part 1: Logic Gates"
 date: 2024-10-17
 ---
 
-These are my summary notes based on reading the book [_But How Do It Know?_ by J. Clark Scott](https://www.amazon.com.au/But-How-Know-Principles-Computers-ebook/dp/B00F25LEVC). If I've used any other resources, I'll link them where appropriate. I've broken the notes down into multiple parts. Part 1 is an introduction to logic gates.
+These are my summary notes based on reading the book [_But How Do It Know?_ by J. Clark Scott](https://www.amazon.com.au/But-How-Know-Principles-Computers-ebook/dp/B00F25LEVC). If I've used any other resources, I'll link them where appropriate. Part 1 is an introduction to logic gates.
 
 |       |
 | :---: |
