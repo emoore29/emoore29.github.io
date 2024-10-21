@@ -31,7 +31,7 @@ The above can be simplified into the following diagram:
 |                    ![AND gate]({{site.url}}/assets/images/logic-gates/and-gate.png)                    |
 | [But How Do It Know?](https://www.amazon.com.au/But-How-Know-Principles-Computers-ebook/dp/B00F25LEVC) |
 
-For C to be on, A and B must both be on. Any other combinations will result in Q being off:
+For C to be on, A and B must both be on. Any other combinations will result in C being off:
 
 | A   | B   | C   |
 | --- | --- | --- |
