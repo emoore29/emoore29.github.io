@@ -9,7 +9,7 @@ defaults:
     values:
       layout: "default"
 
-baseurl: "emoore29.github.io"
+baseurl: ""
 
 plugins:
   - jekyll-feed
