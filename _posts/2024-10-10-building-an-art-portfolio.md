@@ -3,9 +3,9 @@ title: "Building an Art Portfolio Website with Next.js and Sanity"
 date: 2024-10-10
 ---
 
-In late 2023/early 2024 I built a [portfolio website](https://www.donnapriceart.com/) for an artist. My client had no technical skills, didn't want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.
+In late 2023/early 2024 I built a [portfolio website](https://www.donnapriceart.com/) for an artist. They didn't want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.
 
-I didn't want to have to build out a GUI and/or implement authentication using vanilla HTML, CSS and JavaScript, and Sanity had a generous free plan. I decided to use Sanity as the platform on which my client could update the website content, and Next.js as the framework I used to build the frontend, since I was already familiar with it. Sanity, thankfully, handles the authentication.
+I decided to use Sanity as the backend platform on which my client could update the website content, and Next.js as the framework I used to build the frontend, since I was already familiar with it. Sanity handles the authentication.
 
 These are the primary guides I used to get started with the project:
 

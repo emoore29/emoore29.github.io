@@ -9,8 +9,8 @@
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Building an Art Portfolio Website with Next.js and Sanity" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="In late 2023/early 2024 I built a portfolio website for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work." />
-<meta property="og:description" content="In late 2023/early 2024 I built a portfolio website for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work." />
+<meta name="description" content="In late 2023/early 2024 I built a portfolio website for an artist. They didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work." />
+<meta property="og:description" content="In late 2023/early 2024 I built a portfolio website for an artist. They didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work." />
 <link rel="canonical" href="http://localhost:4000/2024/10/10/building-an-art-portfolio.html" />
 <meta property="og:url" content="http://localhost:4000/2024/10/10/building-an-art-portfolio.html" />
 <meta property="og:type" content="article" />
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Building an Art Portfolio Website with Next.js and Sanity" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-10-10T00:00:00+08:00","datePublished":"2024-10-10T00:00:00+08:00","description":"In late 2023/early 2024 I built a portfolio website for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.","headline":"Building an Art Portfolio Website with Next.js and Sanity","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2024/10/10/building-an-art-portfolio.html"},"url":"http://localhost:4000/2024/10/10/building-an-art-portfolio.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-10-10T00:00:00+08:00","datePublished":"2024-10-10T00:00:00+08:00","description":"In late 2023/early 2024 I built a portfolio website for an artist. They didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.","headline":"Building an Art Portfolio Website with Next.js and Sanity","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2024/10/10/building-an-art-portfolio.html"},"url":"http://localhost:4000/2024/10/10/building-an-art-portfolio.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,15 +36,13 @@
         <header>
           <button id="theme-toggle"></button>
           <h1 id="site-title">
-            <a id="site-title-link" href="https://emoore29.github.io/"
-              >emma moore</a
-            >
+            <a id="site-title-link" href="/">emma moore</a>
           </h1>
           <nav>
   <ul id="navigation-list">
       
         <li>
-          <a href="/about" class="nav-link" >about</a>
+          <a href="/" class="nav-link" >about</a>
         </li>
         
         /
@@ -73,9 +71,9 @@
     <p class="note-date">10 Oct 2024</p>
   </div>
 
-  <p>In late 2023/early 2024 I built a <a href="https://www.donnapriceart.com/">portfolio website</a> for an artist. My client had no technical skills, didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.</p>
+  <p>In late 2023/early 2024 I built a <a href="https://www.donnapriceart.com/">portfolio website</a> for an artist. They didn’t want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.</p>
 
-<p>I didn’t want to have to build out a GUI and/or implement authentication using vanilla HTML, CSS and JavaScript, and Sanity had a generous free plan. I decided to use Sanity as the platform on which my client could update the website content, and Next.js as the framework I used to build the frontend, since I was already familiar with it. Sanity, thankfully, handles the authentication.</p>
+<p>I decided to use Sanity as the backend platform on which my client could update the website content, and Next.js as the framework I used to build the frontend, since I was already familiar with it. Sanity handles the authentication.</p>
 
 <p>These are the primary guides I used to get started with the project:</p>
 
