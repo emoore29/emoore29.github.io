@@ -1,5 +1,5 @@
 :root {
-  --max-page-width: 600px;
+  --max-page-width: 1000px;
 }
 
 html {
@@ -69,17 +69,14 @@ body {
   border-radius: 10px;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   margin: 0 auto;
   min-height: 100vh;
   max-width: var(--max-page-width);
 }
 
-.center {
-  max-width: var(--max-page-width);
-  padding: 20px;
-  width: 100%;
+.page-content {
+  margin-top: 30px;
 }
 
 .note-header {
@@ -95,13 +92,11 @@ img {
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-bottom: 15px;
   margin: 0 auto;
-  width: 100%;
+  min-width: 300px;
+  max-width: 300px;
+  width: 300px;
 }
 
 h2 {
@@ -126,15 +121,11 @@ p {
 
 #site-title {
   font-size: 1.5rem;
-  margin: 5px;
   font-weight: 500;
 }
 
 #navigation-list {
-  display: flex;
-  justify-content: center;
   gap: 1.5rem;
-  align-items: baseline;
   list-style: none;
   padding: 0;
   width: 100%;
@@ -187,9 +178,6 @@ footer {
 }
 
 .portfolio-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   list-style: none;
   padding-left: 0;
 }

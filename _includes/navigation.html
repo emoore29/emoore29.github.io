@@ -1,12 +1,14 @@
 <nav>
+<div>
+  <a href="https://github.com/emoore29" target="_blank">{% include github-icon.html %}</a>
+  <a href="https://www.linkedin.com/in/emoore29/">LinkedIn</a>
+</div>
   <ul id="navigation-list">
       {% for item in site.data.navigation %}
         <li>
           <a href="{{ item.link }}"{% if page.url == item.link %} class="nav-link current-nav-link"{% else %} class="nav-link" {% endif %}>{{ item.name }}</a>
         </li>
-        {% unless forloop.last %}
-        /
-      {% endunless %}
+        
       {% endfor %}
   </ul>
 </nav>
