@@ -10,27 +10,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="container">
-      <div class="center">
-        <header>
-          <button id="theme-toggle"></button>
-          <h1 id="site-title">
-            <a id="site-title-link" href="/">emma moore</a>
-          </h1>
-          {% include navigation.html %}
-        </header>
-        <main class="page-content">
-          {{ content }}
-          <p style="text-align: center; margin-top: 30px">. . .</p>
-        </main>
-      </div>
+    <div class="wrapper">
+      {% include header.html %}
+      <main class="page-content">{{ content }}</main>
+      {% include footer.html %}
     </div>
     <script src="/assets/js/themes.js"></script>
-    <!-- <script src="/assets/js/stars.js"></script> -->
   </body>
 </html>
