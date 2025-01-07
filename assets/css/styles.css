@@ -26,7 +26,7 @@ html[data-theme="light"] {
     --dark-green: #232c23;
     --grey: #f8f8f8;
     --background-color: #1e1e1f;
-    --text: #e7e7e7;
+    --text: #dddddd;
     --em-text: #ffffff;
     --pink: #b93673;
   }
@@ -55,8 +55,9 @@ ul {
 }
 
 a {
-  color: var(--green);
+  color: var(--em-text);
   text-decoration: none;
+  font-weight: 600;
 }
 
 a:hover {
@@ -64,7 +65,7 @@ a:hover {
 }
 
 a:visited {
-  color: var(--green);
+  color: var(--em-text);
 }
 
 .note-content > table {
@@ -119,6 +120,7 @@ a#site-title-link {
   color: var(--text);
   text-decoration: none;
   font-size: 14px;
+  font-weight: 400;
 }
 
 .nav-link:visited {
@@ -127,13 +129,13 @@ a#site-title-link {
 
 .nav-link:hover {
   color: var(--em-text);
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
 }
 
 .current-nav-link {
   color: var(--em-text) !important;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .line {
@@ -186,7 +188,7 @@ a#site-title-link {
 .notes-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
   list-style: none;
   padding-left: 0;
 }
@@ -197,7 +199,7 @@ a#site-title-link {
 }
 
 .note-date {
-  margin: 0;
+  margin-top: 5px;
   font-style: italic;
   color: var(--grey);
   font-size: small;
