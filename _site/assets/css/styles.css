@@ -207,7 +207,13 @@ a#site-title-link {
 }
 
 .project {
+  display: flex;
+  gap: 0.5rem;
   margin-bottom: 2.5rem;
+}
+
+.project-img {
+  max-width: 150px;
 }
 
 .project-tech {
