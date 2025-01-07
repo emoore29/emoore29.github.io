@@ -14,6 +14,7 @@ html[data-theme="light"] {
   --grey: #575757;
   --background-color: #f8f8f8;
   --text: #424242;
+  --em-text: #303030;
   --pink: #b93673;
 }
 
@@ -25,7 +26,8 @@ html[data-theme="light"] {
     --dark-green: #232c23;
     --grey: #f8f8f8;
     --background-color: #1e1e1f;
-    --text: #fff;
+    --text: #e7e7e7;
+    --em-text: #ffffff;
     --pink: #b93673;
   }
 }
@@ -114,27 +116,31 @@ a#site-title-link {
   display: flex;
   justify-content: left;
   align-items: center;
-  color: var(--green);
+  color: var(--text);
   text-decoration: none;
+  font-size: 14px;
 }
 
 .nav-link:visited {
-  color: var(--green);
+  color: var(--text);
 }
 
 .nav-link:hover {
-  color: var(--purple);
+  color: var(--em-text);
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .current-nav-link {
-  color: var(--purple) !important;
+  color: var(--em-text) !important;
+  font-weight: 500;
 }
 
 .line {
   display: block;
   width: 20px;
   height: 1px;
-  background-color: var(--green);
+  background-color: var(--text);
   transition: width 0.1s ease;
   margin: 0 5px 0 0;
 }
@@ -142,7 +148,7 @@ a#site-title-link {
 .nav-link:hover .line,
 .nav-link.current-nav-link .line {
   width: 40px;
-  background-color: var(--purple) !important;
+  background-color: var(--em-text) !important;
 }
 
 .wrapper {
@@ -165,7 +171,7 @@ a#site-title-link {
 #site-title {
   font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 #navigation-list {
