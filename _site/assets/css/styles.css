@@ -42,9 +42,14 @@ h4 {
   margin: 0;
 }
 
+.note-content > p {
+  margin: 1rem 0;
+}
+
 p,
 ul {
   font-size: 16px;
+  margin: 0;
 }
 
 a {
@@ -75,7 +80,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   gap: 2px;
-  padding: 4rem 0;
+  padding: 4rem 2rem 4rem 0;
   min-width: 350px;
   max-width: 350px;
   width: 350px;
@@ -101,9 +106,43 @@ a#site-title-link {
   text-decoration: none;
 }
 
-a:active,
 .nav-link:active {
   color: var(--pink);
+}
+
+.nav-link {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: var(--green);
+  text-decoration: none;
+}
+
+.nav-link:visited {
+  color: var(--green);
+}
+
+.nav-link:hover {
+  color: var(--purple);
+}
+
+.current-nav-link {
+  color: var(--purple) !important;
+}
+
+.line {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: var(--green);
+  transition: width 0.1s ease;
+  margin: 0 5px 0 0;
+}
+
+.nav-link:hover .line,
+.nav-link.current-nav-link .line {
+  width: 40px;
+  background-color: var(--purple) !important;
 }
 
 .wrapper {
@@ -136,20 +175,6 @@ a:active,
   list-style: none;
   padding: 0;
   width: 100%;
-}
-
-.nav-link {
-  color: var(--green);
-  text-decoration: none;
-}
-
-.nav-link:visited {
-  color: var(--green);
-}
-
-.current-nav-link {
-  color: var(--purple) !important;
-  text-decoration: underline;
 }
 
 .notes-list {
