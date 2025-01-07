@@ -2,7 +2,7 @@
   <ul id="navigation-list">
       {% for item in site.data.navigation %}
         <li>
-          <a href="{{ item.link }}"{% if page.url == item.link or item.link == "#" | append: page.id %} class="nav-link current-nav-link"{% else %} class="nav-link" {% endif %}><span class="line"></span>{{ item.name }}</a>
+          <a href="{{ item.link }}"{% if page.url == item.link or item.link == "#" | append: page.id or page.url contains '/notes' and item.name == 'notes' %} class="nav-link current-nav-link"{% else %} class="nav-link" {% endif %}><span class="line"></span>{{ item.name }}</a>
         </li>
         
       {% endfor %}

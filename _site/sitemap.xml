@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/2023/04/24/first-note.html</loc>
+<loc>http://localhost:4000/notes/2023/04/24/first-note.html</loc>
 <lastmod>2023-04-24T00:00:00+08:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2023/11/18/column-count-testing.html</loc>
+<loc>http://localhost:4000/notes/2023/11/18/column-count-testing.html</loc>
 <lastmod>2023-11-18T00:00:00+08:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2024/10/10/building-an-art-portfolio.html</loc>
+<loc>http://localhost:4000/notes/2024/10/10/building-an-art-portfolio.html</loc>
 <lastmod>2024-10-10T00:00:00+08:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2024/10/17/logic-gates.html</loc>
+<loc>http://localhost:4000/notes/2024/10/17/logic-gates.html</loc>
 <lastmod>2024-10-17T00:00:00+08:00</lastmod>
 </url>
 <url>
