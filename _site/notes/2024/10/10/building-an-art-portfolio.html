@@ -134,7 +134,7 @@
 </a
     >
   </div>
-  <button id="theme-toggle"></button>
+  <button id="theme-toggle" aria-label="Theme toggle"></button>
 </div>
 
 </header>
@@ -157,9 +157,11 @@
   <li><a href="https://www.sanity.io/guides/sanity-webhooks-and-on-demand-revalidation-in-nextjs">Sanity Webhooks and On-demand Revalidation in Nextjs</a></li>
 </ul>
 
-<p>I’ve created this flowchart to provide an overview of how the website works (right click and open in a new tab for a larger view):</p>
+<p>I’ve created this flowchart to provide an overview of how the website works:</p>
 
 <p><img src="http://localhost:4000/assets/images/dpa/dpa-flowchart.png" alt="Flowchart overview of website architecture." /></p>
+
+<p><br /></p>
 
 <h4 id="configuring-sanity">Configuring Sanity</h4>
 
@@ -188,6 +190,8 @@
   <li>/illustrations</li>
 </ul>
 
+<p><br /></p>
+
 <h4 id="groq-graph-relational-object-queries">GROQ (Graph-Relational Object Queries)</h4>
 
 <p>The queries used to retrieve documents from Sanity are defined in the <code class="language-plaintext highlighter-rouge">sanity/sanity.query.ts</code> file. For example, for a given category, the getArtFromCategory query will request art from a category passed in as a parameter via a sanityFetch() function.</p>
@@ -195,6 +199,8 @@
 <p>The art can then be passed to a Gallery component, which handles displaying the art, along with the title and description.</p>
 
 <p>The <code class="language-plaintext highlighter-rouge">sanityFetch()</code> function also takes a tag. This tag is useful for data revalidation.</p>
+
+<p><br /></p>
 
 <h4 id="on-demand-data-revalidation">On-demand data revalidation</h4>
 
@@ -205,6 +211,8 @@
 <p>Since the data coming from Sanity has been tagged after fetching it, revalidateTag() is used to revalidate all entries associated with a given tag. In Sanity settings, I created a webhook that triggers when Sanity Studio content changes, and this triggers a POST request to be sent to an API endpoint in my Next.js app. A secret URI is shared between Vercel, where the site is hosted, and Sanity.</p>
 
 <p>This ultimately causes the revalidateTag() function provided by Next.js to run, and any data on the server that was previously tagged with the same tag sent in the POST request from Sanity will be revalidated.</p>
+
+<p><br /></p>
 
 <h4 id="routing">Routing</h4>
 

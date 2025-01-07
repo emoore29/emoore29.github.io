@@ -12,9 +12,11 @@ These are the primary guides I used to get started with the project:
 - [How to Build a Portfolio Site with Sanity and Next.js](https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-sanity-and-nextjs/#heading-what-is-sanity)
 - [Sanity Webhooks and On-demand Revalidation in Nextjs](https://www.sanity.io/guides/sanity-webhooks-and-on-demand-revalidation-in-nextjs)
 
-I've created this flowchart to provide an overview of how the website works (right click and open in a new tab for a larger view):
+I've created this flowchart to provide an overview of how the website works:
 
 ![Flowchart overview of website architecture.]({{site.url}}/assets/images/dpa/dpa-flowchart.png)
+
+<br>
 
 #### Configuring Sanity
 
@@ -39,6 +41,8 @@ Therefore, the following url segments are accessible at https://www.donnapricear
 - /oilPaintings
 - /illustrations
 
+<br>
+
 #### GROQ (Graph-Relational Object Queries)
 
 The queries used to retrieve documents from Sanity are defined in the `sanity/sanity.query.ts` file. For example, for a given category, the getArtFromCategory query will request art from a category passed in as a parameter via a sanityFetch() function.
@@ -46,6 +50,8 @@ The queries used to retrieve documents from Sanity are defined in the `sanity/sa
 The art can then be passed to a Gallery component, which handles displaying the art, along with the title and description.
 
 The `sanityFetch()` function also takes a tag. This tag is useful for data revalidation.
+
+<br>
 
 #### On-demand data revalidation
 
@@ -56,6 +62,8 @@ On-demand revalidation is the process of purging the data cache and re-fetching 
 Since the data coming from Sanity has been tagged after fetching it, revalidateTag() is used to revalidate all entries associated with a given tag. In Sanity settings, I created a webhook that triggers when Sanity Studio content changes, and this triggers a POST request to be sent to an API endpoint in my Next.js app. A secret URI is shared between Vercel, where the site is hosted, and Sanity.
 
 This ultimately causes the revalidateTag() function provided by Next.js to run, and any data on the server that was previously tagged with the same tag sent in the POST request from Sanity will be revalidated.
+
+<br>
 
 #### Routing
 
