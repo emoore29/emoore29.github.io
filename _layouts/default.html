@@ -15,20 +15,13 @@
     />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <button id="theme-toggle"></button>
-        <h1 id="site-title">
-          <a id="site-title-link" href="/">Emma Moore</a>
-        </h1>
-        {% include navigation.html %}
-      </header>
+    <div class="wrapper">
+      {% include header.html %}
       <main class="page-content">
         {{ content }}
         <p style="text-align: center; margin-top: 30px">. . .</p>
       </main>
     </div>
     <script src="/assets/js/themes.js"></script>
-    <!-- <script src="/assets/js/stars.js"></script> -->
   </body>
 </html>

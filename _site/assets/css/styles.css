@@ -30,19 +30,21 @@ html[data-theme="light"] {
   }
 }
 
-#theme-toggle {
-  height: 28px;
-  background-color: var(--background-color);
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
 * {
   box-sizing: border-box;
   color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+p,
+ul {
+  font-size: 16px;
 }
 
 a {
@@ -58,46 +60,67 @@ a:visited {
   color: var(--green);
 }
 
+.note-content > table {
+  margin: 20px auto;
+}
+
 body {
   margin: 0;
-  padding: 30px;
   font-family: "Noto Sans", serif;
   background-color: var(--background-color);
 }
 
-.container {
-  border-radius: 10px;
-  width: 100%;
+header {
   display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  min-height: 100vh;
-  max-width: var(--max-page-width);
-  margin-top: 30px;
-}
-
-.note-header {
-  margin-bottom: 40px;
-}
-
-.note-content > table {
-  margin: 20px auto;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2px;
+  padding: 4rem 0;
+  min-width: 350px;
+  max-width: 350px;
+  width: 350px;
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
 }
 
 img {
   max-width: 100%;
 }
 
-header {
-  padding-bottom: 15px;
-  min-width: 350px;
-  max-width: 350px;
-  width: 350px;
+nav {
+  width: 100%;
 }
 
-p,
-ul {
-  font-size: 16px;
+a#site-title-link:hover {
+  font-style: normal;
+}
+
+a#site-title-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a:active,
+.nav-link:active {
+  color: var(--pink);
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: var(--max-page-width);
+}
+
+.page-content {
+  padding: 4.5rem 0;
+}
+
+.note-header {
+  margin-bottom: 40px;
 }
 
 #site-title {
@@ -107,13 +130,11 @@ ul {
 }
 
 #navigation-list {
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   list-style: none;
   padding: 0;
-  width: 100%;
-}
-
-nav {
   width: 100%;
 }
 
@@ -131,21 +152,6 @@ nav {
   text-decoration: underline;
 }
 
-a#site-title-link {
-  color: var(--text);
-  text-decoration: none;
-}
-
-a#site-title-link:hover {
-  font-style: normal;
-}
-
-footer {
-  padding: 4rem 0 1rem 0;
-  text-align: center;
-  margin: auto auto 0 auto;
-}
-
 .notes-list {
   display: flex;
   flex-direction: column;
@@ -159,11 +165,6 @@ footer {
   font-weight: 450;
 }
 
-.portfolio-list {
-  list-style: none;
-  padding-left: 0;
-}
-
 .note-date {
   margin: 0;
   font-style: italic;
@@ -171,23 +172,10 @@ footer {
   font-size: small;
 }
 
-hr {
-  border: none;
-  border-top: 1px dashed var(--grey);
-  color: var(--grey);
-  width: 100%;
-  opacity: 0.5;
-}
-
-#github-icon {
-  height: 27px;
+.social-icon {
+  height: 24px;
   display: flex;
   align-items: center;
-}
-
-#linked-in-icon {
-  width: 30px;
-  height: 27px;
 }
 
 .socials {
@@ -197,7 +185,14 @@ hr {
   margin: 5px 0;
 }
 
-a:active,
-.nav-link:active {
-  color: var(--pink);
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#theme-toggle {
+  height: 28px;
+  background-color: var(--background-color);
+  border: none;
+  cursor: pointer;
 }
