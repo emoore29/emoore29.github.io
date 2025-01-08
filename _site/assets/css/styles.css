@@ -1,5 +1,5 @@
 :root {
-  --max-page-width: 1080px;
+  --max-page-width: 1200px;
   --toggle-width: 130;
 }
 
@@ -252,70 +252,19 @@ a#site-title-link {
 .socials {
   display: flex;
   padding-left: 0;
-  gap: 5px;
+  gap: 0.5rem;
   margin: 5px 0;
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
   margin-top: auto;
   padding: 0 0 4rem 0;
 }
 
-@media (min-width: 1000px) {
-  .wrapper {
-    width: 100%;
-    padding: 0 40px;
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    min-height: 100vh;
-    max-width: var(--max-page-width);
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2px;
-    padding: 4rem 2rem 4rem 0;
-    min-width: 350px;
-    max-width: 350px;
-    width: 350px;
-    position: sticky;
-    top: 0;
-    max-height: 100vh;
-    background-color: var(--background-color);
-  }
-
-  .line {
-    display: block;
-    width: 20px;
-    height: 1px;
-    background-color: var(--text);
-    transition: width 0.1s ease;
-    margin: 0 5px 0 0;
-  }
-
-  #navigation-list {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  #site-title {
-    margin-bottom: 40px;
-  }
-
-  .desktop-buttons {
-    display: flex;
-    justify-content: space-between;
-    color: var(--text);
-  }
-
-  .footer {
-    display: none;
-  }
+.footer-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 
 /* Toggle button */
@@ -334,6 +283,8 @@ a#site-title-link {
   width: 40px;
   display: block;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .toggle {
@@ -388,4 +339,81 @@ a#site-title-link {
   display: flex;
   align-items: center;
   color: var(--background-color);
+}
+
+.desktop-info,
+.mobile-info {
+  font-size: 12px;
+}
+
+.desktop-info {
+  display: none;
+}
+
+.mobile-info {
+  display: block;
+}
+
+@media (min-width: 1000px) {
+  .wrapper {
+    width: 100%;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: var(--max-page-width);
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    padding: 4rem 2rem 4rem 0;
+    min-width: 350px;
+    max-width: 350px;
+    width: 350px;
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    background-color: var(--background-color);
+  }
+
+  .line {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: var(--text);
+    transition: width 0.1s ease;
+    margin: 0 5px 0 0;
+  }
+
+  #navigation-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #site-title {
+    margin-bottom: 40px;
+  }
+
+  .desktop-buttons {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .desktop-info {
+    display: block;
+  }
+
+  .mobile-info {
+    display: none;
+  }
 }
