@@ -27,6 +27,7 @@
       rel="stylesheet"
     />
   </head>
+  <script src="/assets/js/checkTheme.js"></script>
   <body>
     <div class="wrapper">
       <header>
@@ -127,7 +128,63 @@
 </a
     >
   </div>
-  <button id="theme-toggle" aria-label="Theme toggle"></button>
+  <label class="toggle-wrapper" htmlFor="toggle">
+  <div id="theme-toggle" class="toggle">
+    <span class="hidden">
+       Enable dark
+      mode 
+    </span>
+    <div class="toggle-icons">
+      <div class="theme-icon">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="auto"
+    height="100%"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="size-6"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+    />
+  </svg>
+</div>
+<div class="theme-icon">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="auto"
+    height="100%"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-sun-high"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" />
+    <path d="M6.343 17.657l-1.414 1.414" />
+    <path d="M6.343 6.343l-1.414 -1.414" />
+    <path d="M17.657 6.343l1.414 -1.414" />
+    <path d="M17.657 17.657l1.414 1.414" />
+    <path d="M4 12h-2" />
+    <path d="M12 4v-2" />
+    <path d="M20 12h2" />
+    <path d="M12 20v2" />
+  </svg>
+</div>
+
+    </div>
+    <input id="toggle-input" class="toggle-input" name="toggle" type="checkbox"
+     />
+  </div>
+</label>
+
 </div>
 
 </header>
@@ -207,10 +264,66 @@
 </a
     >
   </div>
-  <button id="theme-toggle"></button>
+  <label class="toggle-wrapper" htmlFor="toggle">
+  <div id="theme-toggle" class="toggle">
+    <span class="hidden">
+       Enable dark
+      mode 
+    </span>
+    <div class="toggle-icons">
+      <div class="theme-icon">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="auto"
+    height="100%"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="size-6"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+    />
+  </svg>
+</div>
+<div class="theme-icon">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="auto"
+    height="100%"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-sun-high"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" />
+    <path d="M6.343 17.657l-1.414 1.414" />
+    <path d="M6.343 6.343l-1.414 -1.414" />
+    <path d="M17.657 6.343l1.414 -1.414" />
+    <path d="M17.657 17.657l1.414 1.414" />
+    <path d="M4 12h-2" />
+    <path d="M12 4v-2" />
+    <path d="M20 12h2" />
+    <path d="M12 20v2" />
+  </svg>
+</div>
+
+    </div>
+    <input id="toggle-input" class="toggle-input" name="toggle" type="checkbox"
+     />
+  </div>
+</label>
+
 </footer>
 
     </div>
-    <script src="/assets/js/themes.js"></script>
   </body>
+  <script src="/assets/js/themeToggle.js"></script>
 </html>

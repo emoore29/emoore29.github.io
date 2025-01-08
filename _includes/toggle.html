@@ -1,0 +1,13 @@
+<label class="toggle-wrapper" htmlFor="toggle">
+  <div id="theme-toggle" class="toggle">
+    <span class="hidden">
+      {% if storedTheme == "dark" %} Enable light mode {% else %} Enable dark
+      mode {% endif %}
+    </span>
+    <div class="toggle-icons">
+      {% include moon.html %}{% include sun.html %}
+    </div>
+    <input id="toggle-input" class="toggle-input" name="toggle" type="checkbox"
+    {% if storedTheme == "dark" %} checked {% endif %} />
+  </div>
+</label>

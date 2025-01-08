@@ -1,5 +1,6 @@
 :root {
   --max-page-width: 1080px;
+  --toggle-width: 130;
 }
 
 html {
@@ -9,16 +10,16 @@ html {
 html[data-theme="light"] {
   --grey: #575757;
   --background-color: #f8f8f8;
-  --text: #424242;
-  --em-text: #303030;
+  --text: #000000bd;
+  --em-text: #000000e1;
   --pink: #b93673;
 }
 
 @media (prefers-color-scheme: dark) {
   html[data-theme="dark"] {
     --grey: #f8f8f8;
-    --background-color: #1e1e1f;
-    --text: #dddddd;
+    --background-color: #1b1b1b;
+    --text: #ffffffbd;
     --em-text: #ffffff;
     --pink: #b93673;
   }
@@ -96,7 +97,7 @@ a#site-title-link:hover {
 }
 
 a#site-title-link {
-  color: var(--text);
+  color: var(--em-text);
   text-decoration: none;
 }
 
@@ -262,14 +263,6 @@ a#site-title-link {
   padding: 0 0 4rem 0;
 }
 
-#theme-toggle {
-  height: 28px;
-  background-color: var(--background-color);
-  border: none;
-  cursor: pointer;
-  color: var(--text);
-}
-
 @media (min-width: 1000px) {
   .wrapper {
     width: 100%;
@@ -323,4 +316,76 @@ a#site-title-link {
   .footer {
     display: none;
   }
+}
+
+/* Toggle button */
+/* Visually hide label text */
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.toggle-wrapper {
+  width: 40px;
+  display: block;
+  cursor: pointer;
+}
+
+.toggle {
+  height: 24px;
+  width: 40px;
+  background: var(--text);
+  border: 2px solid #00000000;
+  border-radius: 40px;
+  padding: 3px;
+  position: relative;
+  margin: auto;
+}
+
+.toggle::before {
+  content: "";
+  display: block;
+  height: 14px;
+  width: 14px;
+  border-radius: 100%;
+  background: var(--background-color);
+  position: absolute;
+  z-index: 2;
+  transform: translate(0);
+  transition: transform 0.2s ease;
+}
+
+.toggle.dark::before {
+  transform: translateX(16px);
+}
+
+/* Hide checkbox */
+#toggle-input {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.toggle-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.theme-icon {
+  height: 14px;
+  display: flex;
+  align-items: center;
+  color: var(--background-color);
 }
