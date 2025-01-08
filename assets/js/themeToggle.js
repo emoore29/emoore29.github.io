@@ -1,28 +1,39 @@
-const themeToggle = document.getElementById("theme-toggle");
+// Handles theme toggling after the HTML has loaded
 
-console.log(themeToggle.style);
+const toggles = document.getElementsByClassName("toggle");
+const hiddens = document.getElementsByClassName("hidden");
 
-// Listen for user clicking theme toggler
-themeToggle.addEventListener("click", () => {
-  console.log("theme toggle clicked");
-  const theme = localStorage.getItem("theme");
+// Set initial display of theme after page load
+for (let toggle of toggles) {
   if (theme === "light") {
-    setDarkTheme();
+    toggle.classList.add("light");
   } else {
-    setLightTheme();
+    toggle.classList.add("dark");
   }
-});
-
-function setDarkTheme() {
-  localStorage.setItem("theme", "dark");
-  document.documentElement.setAttribute("data-theme", "dark");
-  themeToggle.classList.remove("light");
-  themeToggle.classList.add("dark");
 }
 
-function setLightTheme() {
+// Attach event listeners to desktop and mobile toggles
+for (let toggle of toggles) {
+  toggle.addEventListener("click", () => {
+    let theme = localStorage.getItem("theme");
+    if (theme === "light") {
+      setDarkTheme(toggle);
+    } else {
+      setLightTheme(toggle);
+    }
+  });
+}
+
+function setDarkTheme(toggle) {
+  localStorage.setItem("theme", "dark");
+  document.documentElement.setAttribute("data-theme", "dark");
+  toggle.classList.remove("light");
+  toggle.classList.add("dark");
+}
+
+function setLightTheme(toggle) {
   localStorage.setItem("theme", "light");
   document.documentElement.setAttribute("data-theme", "light");
-  themeToggle.classList.add("light");
-  themeToggle.classList.remove("dark");
+  toggle.classList.add("light");
+  toggle.classList.remove("dark");
 }
