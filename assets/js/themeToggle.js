@@ -29,6 +29,9 @@ function setDarkTheme(toggle) {
   document.documentElement.setAttribute("data-theme", "dark");
   toggle.classList.remove("light");
   toggle.classList.add("dark");
+  for (let hidden of hiddens) {
+    hidden.innerHTML = "Enable light mode";
+  }
 }
 
 function setLightTheme(toggle) {
@@ -36,4 +39,7 @@ function setLightTheme(toggle) {
   document.documentElement.setAttribute("data-theme", "light");
   toggle.classList.add("light");
   toggle.classList.remove("dark");
+  for (let hidden of hiddens) {
+    hidden.innerHTML = "Enable dark mode";
+  }
 }
