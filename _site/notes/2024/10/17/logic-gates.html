@@ -31,6 +31,8 @@
     />
   </head>
   <script src="/assets/js/checkTheme.js"></script>
+  <script src="/assets/js/keyboardNavigation.js"></script>
+
   <body>
     <div class="wrapper">
       <header>
@@ -132,11 +134,11 @@
 </a
     >
   </div>
-  <label class="toggle-wrapper" htmlFor="toggle">
-  <div id="theme-toggle" class="toggle">
-    <span class="hidden"> </span>
+  <label class="toggle-wrapper" htmlFor="toggle" aria-labelledby="label">
+  <div class="toggle">
+    <span id="label" class="hidden">Theme toggle</span>
     <div class="toggle-icons">
-      <div class="theme-icon">
+      <div class="theme-icon" aria-label="Moon icon">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="auto"
@@ -154,7 +156,7 @@
     />
   </svg>
 </div>
-<div class="theme-icon">
+<div class="theme-icon" aria-label="Sun icon">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="auto"
@@ -620,11 +622,11 @@
 </a
       >
     </div>
-    <label class="toggle-wrapper" htmlFor="toggle">
-  <div id="theme-toggle" class="toggle">
-    <span class="hidden"> </span>
+    <label class="toggle-wrapper" htmlFor="toggle" aria-labelledby="label">
+  <div class="toggle">
+    <span id="label" class="hidden">Theme toggle</span>
     <div class="toggle-icons">
-      <div class="theme-icon">
+      <div class="theme-icon" aria-label="Moon icon">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="auto"
@@ -642,7 +644,7 @@
     />
   </svg>
 </div>
-<div class="theme-icon">
+<div class="theme-icon" aria-label="Sun icon">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="auto"

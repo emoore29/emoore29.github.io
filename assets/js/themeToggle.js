@@ -1,10 +1,11 @@
 // Handles theme toggling after the HTML has loaded
 
+const toggleInputs = document.getElementsByClassName("toggle-input");
 const toggles = document.getElementsByClassName("toggle");
 const hiddens = document.getElementsByClassName("hidden");
 
 // Set initial display of theme after page load
-for (let toggle of toggles) {
+for (let toggle of toggleInputs) {
   if (theme === "light") {
     toggle.classList.add("light");
   } else {
@@ -13,7 +14,7 @@ for (let toggle of toggles) {
 }
 
 // Attach event listeners to desktop and mobile toggles
-for (let toggle of toggles) {
+for (let toggle of toggleInputs) {
   toggle.addEventListener("click", () => {
     let theme = localStorage.getItem("theme");
     if (theme === "light") {
@@ -27,19 +28,24 @@ for (let toggle of toggles) {
 function setDarkTheme(toggle) {
   localStorage.setItem("theme", "dark");
   document.documentElement.setAttribute("data-theme", "dark");
-  toggle.classList.remove("light");
+  for (let toggler of toggles) {
+    toggler.classList.remove("light");
+    toggler.classList.add("dark");
+  }
   toggle.classList.add("dark");
   for (let hidden of hiddens) {
-    hidden.innerHTML = "Enable light mode";
+    hidden.innerHTML = "Click to enable light mode";
   }
 }
 
 function setLightTheme(toggle) {
   localStorage.setItem("theme", "light");
   document.documentElement.setAttribute("data-theme", "light");
-  toggle.classList.add("light");
-  toggle.classList.remove("dark");
+  for (let toggler of toggles) {
+    toggler.classList.remove("dark");
+    toggler.classList.add("light");
+  }
   for (let hidden of hiddens) {
-    hidden.innerHTML = "Enable dark mode";
+    hidden.innerHTML = "Click to enable dark mode";
   }
 }
