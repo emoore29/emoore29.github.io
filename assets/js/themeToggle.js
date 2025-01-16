@@ -4,7 +4,7 @@ const toggleInputs = document.getElementsByClassName("toggle-input");
 const toggles = document.getElementsByClassName("toggle");
 const hiddens = document.getElementsByClassName("hidden");
 
-// Set initial display of theme after page load
+// Set initial display of theme toggle after page load
 for (let toggle of toggleInputs) {
   if (theme === "light") {
     toggle.classList.add("light");
@@ -29,7 +29,6 @@ function setDarkTheme(toggle) {
   localStorage.setItem("theme", "dark");
   document.documentElement.setAttribute("data-theme", "dark");
   for (let toggler of toggles) {
-    toggler.classList.remove("light");
     toggler.classList.add("dark");
   }
   toggle.classList.add("dark");
@@ -43,7 +42,6 @@ function setLightTheme(toggle) {
   document.documentElement.setAttribute("data-theme", "light");
   for (let toggler of toggles) {
     toggler.classList.remove("dark");
-    toggler.classList.add("light");
   }
   for (let hidden of hiddens) {
     hidden.innerHTML = "Click to enable dark mode";
