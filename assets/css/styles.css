@@ -182,7 +182,7 @@ a#site-title-link {
 }
 
 .page-content {
-  padding: 4.5rem 0 4.5rem 2rem;
+  padding: 4.5rem 0;
 }
 
 .note-header {
@@ -427,7 +427,7 @@ html.keyboard-navigation .toggle:focus-within {
   }
 
   .page-content {
-    padding: 4.5rem 0;
+    padding: 4.5rem 0 4.5rem 2rem;
   }
 
   .line {
