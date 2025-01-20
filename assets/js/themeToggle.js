@@ -1,7 +1,7 @@
 // Handles theme toggling after the HTML has loaded
 const toggleInputs = document.getElementsByClassName("toggle-input");
 const toggles = document.getElementsByClassName("toggle");
-const hiddens = document.getElementsByClassName("hidden");
+const hiddens = document.getElementsByClassName("visually-hidden");
 
 // Set initial display of theme toggle after page load
 for (let toggle of toggleInputs) {

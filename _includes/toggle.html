@@ -1,10 +1,10 @@
-<label class="toggle-wrapper" htmlFor="toggle" aria-labelledby="label">
+<label class="toggle-wrapper" aria-labelledby="label">
   <div class="toggle">
-    <span id="label" class="hidden">Theme toggle</span>
+    <span id="label" class="visually-hidden">Theme toggle</span>
     <div class="toggle-icons">
       {% include moon.html %}{% include sun.html %}
     </div>
     <input id="toggle-input" class="toggle-input" name="toggle" type="checkbox"
-    {% if storedTheme == "dark" %} checked {% endif %} />
+    {% if theme == "dark" %} checked {% endif %} />
   </div>
 </label>

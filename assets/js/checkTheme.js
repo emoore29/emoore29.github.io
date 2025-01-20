@@ -7,11 +7,9 @@ const darkPreference = window.matchMedia(
 const theme = storedTheme || (darkPreference ? "dark" : "light");
 document.documentElement.setAttribute("data-theme", theme);
 
+// Add dark mode stylesheet for Gist
 if (theme == "dark") {
-  console.log("Dark theme detected, applying dark mode");
   addGistDarkMode();
-} else {
-  console.log("No dark theme detected");
 }
 
 // Add gist dark mode styles

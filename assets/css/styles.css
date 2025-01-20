@@ -31,20 +31,40 @@ html[data-theme="dark"] {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   margin: 0;
   color: var(--text);
   transition: var(--theme-transition);
 }
 
+ol {
+  color: var(--text);
+}
+
+.note-content {
+  color: var(--text);
+}
+
+.note-content > table {
+  margin: 20px auto;
+}
+
 .note-content > p {
-  margin: 1rem 0;
+  margin: 2rem 0;
+  line-height: 1.7;
+}
+
+.note-content > ul,
+ol {
+  margin: 2rem 0;
 }
 
 p,
 ul {
-  font-size: 16px;
   margin: 0;
+  font-size: 16px;
   color: var(--text);
   transition: var(--theme-transition);
 }
@@ -63,10 +83,6 @@ a:hover {
 a:visited {
   color: var(--em-text);
   transition: var(--theme-transition);
-}
-
-.note-content > table {
-  margin: 20px auto;
 }
 
 body {
@@ -166,7 +182,7 @@ a#site-title-link {
 }
 
 .page-content {
-  padding: 4.5rem 0;
+  padding: 4.5rem 0 4.5rem 2rem;
 }
 
 .note-header {
@@ -284,9 +300,17 @@ a#site-title-link {
   margin-bottom: 0.5rem;
 }
 
-/* Toggle button */
-/* Visually hide label text */
-.hidden {
+/* Wraps entire toggle component, including label */
+.toggle-wrapper {
+  width: 40px;
+  display: block;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Visually hides label text */
+.visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -296,20 +320,12 @@ a#site-title-link {
   width: 1px;
 }
 
-.toggle-wrapper {
-  width: 40px;
-  display: block;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
+/* Wraps inner elements of toggle component, excluding label */
 .toggle {
   height: 24px;
   width: 40px;
   background: var(--text);
   transition: var(--theme-transition);
-
   border: 2px solid #00000000;
   border-radius: 40px;
   padding: 3px;
@@ -317,6 +333,7 @@ a#site-title-link {
   margin: auto;
 }
 
+/* Circular 'switch' that 'slides' between modes */
 .toggle::before {
   content: "";
   display: block;
@@ -326,18 +343,18 @@ a#site-title-link {
   background: var(--background-color);
   position: absolute;
   transition: var(--theme-transition);
-
   z-index: 2;
   transform: translate(0);
   transition: transform 0.2s ease;
 }
 
+/* Slide transformation for dark mode */
 .toggle.dark::before {
   transform: translateX(16px);
 }
 
 /* Hide checkbox */
-#toggle-input {
+.toggle-input {
   position: absolute;
   top: 0;
   z-index: 2;
@@ -352,6 +369,7 @@ html.keyboard-navigation .toggle:focus-within {
   border-radius: 40px;
 }
 
+/* Spaces icons evenly inside toggle */
 .toggle-icons {
   display: flex;
   justify-content: space-between;

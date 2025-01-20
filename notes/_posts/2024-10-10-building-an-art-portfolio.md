@@ -5,7 +5,7 @@ date: 2024-10-10
 
 In late 2023/early 2024 I built a [portfolio website](https://www.donnapriceart.com/) for an artist. They didn't want to be locked into paying subscription fees for CMSs such as Wordpress or Wix, and had a custom design in mind. They also wanted to be able to update the website themselves and not have to go through me every time they wanted to add or remove a photo of their work.
 
-I decided to use Sanity as the backend platform on which my client could update the website content, and Next.js as the framework I used to build the frontend, since I was already familiar with it. Sanity handles the authentication.
+I decided to use Sanity as the backend platform on which my client could update the website content, and Next.js as the framework I used to build the frontend, since I was already familiar with it. Sanity handles the authentication and has a generous free plan which meant there should be no ongoing costs for the client other than the price of the domain.
 
 These are the primary guides I used to get started with the project:
 
@@ -15,8 +15,6 @@ These are the primary guides I used to get started with the project:
 I've created this flowchart to provide an overview of how the website works:
 
 ![Flowchart overview of website architecture.]({{site.url}}/assets/images/dpa/dpa-flowchart.png)
-
-<br>
 
 #### Configuring Sanity
 
@@ -41,8 +39,6 @@ Therefore, the following url segments are accessible at https://www.donnapricear
 - /oilPaintings
 - /illustrations
 
-<br>
-
 #### GROQ (Graph-Relational Object Queries)
 
 The queries used to retrieve documents from Sanity are defined in the `sanity/sanity.query.ts` file. For example, for a given category, the getArtFromCategory query will request art from a category passed in as a parameter via a sanityFetch() function.
@@ -50,8 +46,6 @@ The queries used to retrieve documents from Sanity are defined in the `sanity/sa
 The art can then be passed to a Gallery component, which handles displaying the art, along with the title and description.
 
 The `sanityFetch()` function also takes a tag. This tag is useful for data revalidation.
-
-<br>
 
 #### On-demand data revalidation
 
@@ -62,8 +56,6 @@ On-demand revalidation is the process of purging the data cache and re-fetching 
 Since the data coming from Sanity has been tagged after fetching it, revalidateTag() is used to revalidate all entries associated with a given tag. In Sanity settings, I created a webhook that triggers when Sanity Studio content changes, and this triggers a POST request to be sent to an API endpoint in my Next.js app. A secret URI is shared between Vercel, where the site is hosted, and Sanity.
 
 This ultimately causes the revalidateTag() function provided by Next.js to run, and any data on the server that was previously tagged with the same tag sent in the POST request from Sanity will be revalidated.
-
-<br>
 
 #### Routing
 
