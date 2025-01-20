@@ -426,6 +426,10 @@ html.keyboard-navigation .toggle:focus-within {
     background-color: var(--background-color);
   }
 
+  .page-content {
+    padding: 4.5rem 0;
+  }
+
   .line {
     display: block;
     width: 20px;
