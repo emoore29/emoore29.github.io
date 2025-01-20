@@ -1,7 +1,7 @@
 :root {
   --max-page-width: 1200px;
   --toggle-width: 130;
-  --theme-transition: 0.2s;
+  --theme-transition: 0s;
 }
 
 html {

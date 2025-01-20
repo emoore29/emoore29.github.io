@@ -1,5 +1,4 @@
 // Handles theme toggling after the HTML has loaded
-
 const toggleInputs = document.getElementsByClassName("toggle-input");
 const toggles = document.getElementsByClassName("toggle");
 const hiddens = document.getElementsByClassName("hidden");
@@ -19,8 +18,10 @@ for (let toggle of toggleInputs) {
     let theme = localStorage.getItem("theme");
     if (theme === "light") {
       setDarkTheme(toggle);
+      addGistDarkMode();
     } else {
       setLightTheme(toggle);
+      removeGistDarkMode();
     }
   });
 }

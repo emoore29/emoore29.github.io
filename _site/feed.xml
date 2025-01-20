@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-16T22:28:33+08:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Building an accessible theme toggle</title><link href="http://localhost:4000/2025/01/16/theme-toggle.html" rel="alternate" type="text/html" title="Building an accessible theme toggle" /><published>2025-01-16T00:00:00+08:00</published><updated>2025-01-16T00:00:00+08:00</updated><id>http://localhost:4000/2025/01/16/theme-toggle</id><content type="html" xml:base="http://localhost:4000/2025/01/16/theme-toggle.html"><![CDATA[<p>To offer an inclusive user experience, most websites have both light and dark modes. Some of the key considerations for implementing a theme toggle include the following:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-20T09:36:45+08:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Building an accessible theme toggle</title><link href="http://localhost:4000/2025/01/16/theme-toggle.html" rel="alternate" type="text/html" title="Building an accessible theme toggle" /><published>2025-01-16T00:00:00+08:00</published><updated>2025-01-16T00:00:00+08:00</updated><id>http://localhost:4000/2025/01/16/theme-toggle</id><content type="html" xml:base="http://localhost:4000/2025/01/16/theme-toggle.html"><![CDATA[<p>To offer an inclusive user experience, most websites have both light and dark modes. Some of the key considerations for implementing a theme toggle include the following:</p>
 
 <ol>
   <li>The default theme should initially reflect the user’s system preferences</li>
@@ -34,7 +34,7 @@
 
 <p>I chose the latter design for the current version of my website because I felt that a switch was the best visual representation of the actual function of the button. The first two designs, which display a button with a sun icon when the page is in dark mode, might look confusing to some users.</p>
 
-<p>However, there are some downsides to the latter design as well. It’s slightly more cluttered than the first two designs, doesn’t allow the user to select a ‘system mode’, and creates some additional accessibility concerns to address.</p>
+<p>There are some downsides to the latter design. It’s slightly more cluttered than the first two designs, doesn’t allow the user to select a ‘system mode’, and creates some additional accessibility concerns to address.</p>
 
 <p>Ultimately, the design choice will come down to what is most suitable for the website in question.</p>
 
@@ -46,16 +46,7 @@
 
 <p>Using the data-* HTML attribute on the <code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> element allows for defining CSS variables that change depending on the value of the attribute. For example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html[data-theme="light"] {
-    --background-color: white;
-    --text-color: black;
-}
-
-html[data-theme="dark"] {
-    --background-color: black;
-    --text-color: white;
-}
-</code></pre></div></div>
+<script src="https://gist.github.com/emoore29/fc360375cf5e48414fbc615f576bbbf2.js"></script>
 
 <p>Then, you can simply attach an event listener to a toggle button that toggles the data-theme between “light” and “dark”, which will update the CSS variables and therefore the color scheme of the website.</p>
 
@@ -65,21 +56,7 @@ html[data-theme="dark"] {
 
 <p>For example, if you only define the dark mode colors inside the media query and light mode outside the query, as shown below, the dark mode CSS variables will not be accessible to users who do not have a dark mode system preference:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html[data-theme="light"] {
-	--light-text-color: grey;
-  	--link-color: blue;
-  	--main-background-color: white;
-  	--main-text-color: black;
-}
-
-@media (prefers-color-scheme: dark) {
-	html[data-theme="dark"] {
-		--light-text-color: grey;
-  		--link-color: light-blue;
-  		--main-background-color: black;
-  		--main-text-color: white;
-	}
-</code></pre></div></div>
+<script src="https://gist.github.com/emoore29/b118e94b5d9b2e1522320dddea255ce8.js"></script>
 
 <p>^^This will not work.</p>
 
@@ -89,31 +66,11 @@ html[data-theme="dark"] {
 
 <p>To start with, detect and set the user’s preference with the following code:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const darkPreference = window.matchMedia(
-  "(prefers-color-scheme: dark)"
-).matches;
-const theme = darkPreference ? "dark" : "light";
-document.documentElement.setAttribute("data-theme", theme);
-</code></pre></div></div>
+<script src="https://gist.github.com/emoore29/48ea02553b5c6bdb7e492b9e3344b803.js"></script>
 
 <p>Then, set up your CSS variables:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html[data-theme="light"] {
-  --grey: #575757;
-  --background-color: #f8f8f8;
-  --text: #000000bd;
-  --em-text: #000000e1;
-  --pink: #b93673;
-}
-
-html[data-theme="dark"] {
-  --grey: #f8f8f8;
-  --background-color: #1b1b1b;
-  --text: #ffffffbd;
-  --em-text: #ffffff;
-  --pink: #b93673;
-}
-</code></pre></div></div>
+<script src="https://gist.github.com/emoore29/3a2a186f9edb41cf6f98f1b2425c7d37.js"></script>
 
 <p>Now, if the user’s system preferences are for dark mode, the dark mode CSS variables will be applied, and vice versa.</p>
 
@@ -121,13 +78,7 @@ html[data-theme="dark"] {
 
 <p>To do this, update the <code class="language-plaintext highlighter-rouge">checkTheme.js</code> file to read as follows:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const storedTheme = localStorage.getItem("theme");
-const darkPreference = window.matchMedia(
-  "(prefers-color-scheme: dark)"
-).matches;
-const theme = storedTheme || (darkPreference ? "dark" : "light");
-document.documentElement.setAttribute("data-theme", theme);
-</code></pre></div></div>
+<script src="https://gist.github.com/emoore29/f669bdc6f2fc6d616c5a4a5ff207e491.js"></script>
 
 <p>Now, before the page fully loads, the JavaScript runs and detects if the user’s preference has been stored, and if not, defaults to their system preference.</p>
 
@@ -142,29 +93,9 @@ document.documentElement.setAttribute("data-theme", theme);
 
 <p>Depending on the HTML structure and styling on your toggle, you might also need to add additional logic. For example, the switch on my portfolio has a “sliding” pseudo-element, so that also required adding a “dark” class when dark mode was active to transform the pseudo-element with CSS.</p>
 
-<p>You can view the code for my toggle in this portfolio’s <a href="https://github.com/emoore29/emoore29.github.io/tree/main/assets/js">repository</a>, but to keep things simple, here’s some pseudo-code for what a simple toggle button might need:</p>
+<p>You can view the code for this portfolio <a href="https://github.com/emoore29/emoore29.github.io/tree/main/assets/js">here</a>, but to keep things simple, here’s some pseudo-code for what a simple toggle button might need:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">toggle-button</span><span class="dl">"</span><span class="p">)</span>
-
-<span class="nx">toggle</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">theme</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nf">getItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">theme</span><span class="dl">"</span><span class="p">);</span>
-    <span class="k">if </span><span class="p">(</span><span class="nx">theme</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">light</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nf">setDarkTheme</span><span class="p">();</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nf">setLightTheme</span><span class="p">();</span>
-    <span class="p">}</span>
-
-<span class="kd">function</span> <span class="nf">setDarkTheme</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">localStorage</span><span class="p">.</span><span class="nf">setItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">theme</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">dark</span><span class="dl">"</span><span class="p">);</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nf">setAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">data-theme</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">dark</span><span class="dl">"</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nf">setLightTheme</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">localStorage</span><span class="p">.</span><span class="nf">setItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">theme</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">light</span><span class="dl">"</span><span class="p">);</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nf">setAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">data-theme</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">light</span><span class="dl">"</span><span class="p">);</span>
-<span class="p">}</span>
-
-</code></pre></div></div>
+<script src="https://gist.github.com/emoore29/409f0c93db5e216be0e9990ce49db8dc.js"></script>
 
 <p>You could also use session storage rather than local storage, if you think users are more likely to want the theme to match their system preferences than the last theme they selected on the site, which is shown in the aforementioned guide.</p>
 

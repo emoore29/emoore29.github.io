@@ -78,6 +78,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-seo-tag
   jekyll-sitemap
+  rouge
 
 BUNDLED WITH
    2.5.21
