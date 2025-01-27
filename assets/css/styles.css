@@ -44,6 +44,7 @@ ol {
 }
 
 .note-content {
+  max-width: 738px;
   color: var(--text);
 }
 

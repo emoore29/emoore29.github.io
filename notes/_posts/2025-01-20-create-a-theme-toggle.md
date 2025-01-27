@@ -15,21 +15,20 @@ This is not intended to be an exact step-by-step manual, but a general guide tha
 
 There are many different theme toggle designs online. Here are some examples:
 
-<div width="100%" style="display: flex; justify-content: center">
-<figure style="display: flex; flex-direction: column; width: 150px">
+<div  style="max-width: 100%; display: flex; justify-content: space-between; overflow: auto">
+<figure style="display: flex; flex-direction: column; min-width: 150px">
   <img src="{{site.url}}/assets/images/theme-toggle/mantine.gif" alt="Mantine's theme toggle" >
   <figcaption style="text-align: center"><a href="https://mantine.dev/">Mantine</a></figcaption>
 </figure>
-<figure style="display: flex; flex-direction: column; width: 150px">
+<figure style="display: flex; flex-direction: column; min-width: 150px">
     <img src="{{site.url}}/assets/images/theme-toggle/tailwind.gif" alt="Tailwind's theme toggle" >
   <figcaption style="text-align: center"><a href="https://mantine.dev/">Tailwind</a></figcaption>
 </figure>
-<figure style="display: flex; flex-direction: column; width: 150px">
+<figure style="display: flex; flex-direction: column; min-width: 150px">
   <img src="{{site.url}}/assets/images/theme-toggle/tabler.gif" alt="Tabler's theme toggle" >
-
   <figcaption style="text-align: center"><a href="https://tabler.io/">Tabler</a></figcaption>
 </figure>
-<figure style="display: flex; flex-direction: column; width: 100px">
+<figure style="display: flex; flex-direction: column; min-width: 100px">
 <img src="{{site.url}}/assets/images/theme-toggle/portfolio.gif" alt="Emma Moore's portfolio theme toggle theme toggle" >
   <figcaption style="text-align: center"><a href="https://emoore29.github.io/">Emma Moore Portfolio</a></figcaption>
 </figure>
