@@ -468,3 +468,55 @@ html.keyboard-navigation .toggle:focus-within {
     display: none;
   }
 }
+
+.masonry {
+  column-count: 2;
+  column-gap: 10px;
+  margin: 0;
+  padding: 10px;
+}
+
+.block {
+  display: block;
+  border: 1px solid black;
+  width: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+.inline-block {
+  display: inline-block;
+  border: 1px solid black;
+  width: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+.inline-block-valign {
+  display: inline-block;
+  border: 1px solid black;
+  width: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  vertical-align: top;
+}
+
+#block1 {
+  height: 119px;
+  background-color: #d17b32;
+}
+
+#block2 {
+  height: 163px;
+  background-color: #2c856f;
+}
+
+#block3 {
+  height: 156px;
+  background-color: #4286df;
+}
+
+#block4 {
+  height: 112px;
+  background-color: #838ac5;
+}
