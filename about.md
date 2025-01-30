@@ -4,11 +4,19 @@ title: Emma Moore
 permalink: /
 ---
 
-Hi, I'm Emma! Currently, I'm a student at the [University of New England](https://www.une.edu.au/) completing a Graduate Diploma in Information Technology. In the past, I completed a BA in Professional Writing and Publishing, and I've worked in the editing field for the last five years.
+Hi, I'm Emma! Currently, I'm a student at the [University of New England](https://www.une.edu.au/) completing a Graduate Diploma in Information Technology. In the past, I completed a BA in Professional Writing and Publishing, and I've worked primarily in court transcription for the last five years.
 
 <br>
 
-What I enjoy about professional writing transfers to how I approach coding: I'm driven to create accessible user experiences built with well-organised and documented code.
+I decided to pursue a career in IT when, after reflecting on my career trajectory, I realised that the kind of work I find most fulfilling is work that requires careful thought and creative solutions.
+
+<br>
+
+Growing up, some of my favourite games were [Myst and Riven](https://cyan.com/games/), where I learned to exercise the persistence and patience required to solve their challenging puzzles. During my undergraduate degree, I found myself most engaged in the units that developed my analytical and critical thinking skills.
+
+<br>
+
+I'm excited to build a career that combines these skills with the attention-to-detail and organisational capabilities I've developed through my studies and professional experience.
 
 <br>
 
