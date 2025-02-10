@@ -8,15 +8,7 @@ Hi, I'm Emma! Currently, I'm a student at the [University of New England](https:
 
 <br>
 
-I decided to pursue a career in IT when, after reflecting on my career trajectory, I realised that the kind of work I find most fulfilling is work that requires careful thought and creative solutions.
-
-<br>
-
-Growing up, some of my favourite games were [Myst and Riven](https://cyan.com/games/), where I learned to exercise the persistence and patience required to solve their challenging puzzles. During my undergraduate degree, I found myself most engaged in the units that developed my analytical and critical thinking skills.
-
-<br>
-
-I'm excited to build a career that combines these skills with the attention-to-detail and organisational capabilities I've developed through my studies and professional experience.
+After reflecting on my career, I decided I wanted a new challenge and to work in a field that was a better match for my personal interests and strengths, which led me to where I am now. You can read more about why I chose IT [here]({{site.url}}/notes/2025/02/10/my-career-change.html).
 
 <br>
 
