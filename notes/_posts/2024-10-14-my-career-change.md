@@ -1,11 +1,11 @@
 ---
 title: "Why programming?"
-date: 2025-02-10
+date: 2024-10-14
 ---
 
 Growing up, some of my favourite games were [Myst and Riven](https://cyan.com/games/). Something about being stuck on a puzzle for hours and scrutinising every little detail in the games really appealed to me. I think that should have been a hint that I would enjoy the detailed problem solving and logic involved in programming, but that didn't click for me until much later in my life.
 
-People are often told to follow their "passion" when it comes to choosing a career path. When I graduated high school and entered university, I followed this advice. First, I pursued veterinary science, because I loved animals. When that didn't feel right, I enrolled in my BA in Professional Writing and Publishing, because I loved reading.
+People are often told to follow their "passion" when it comes to choosing a career path. When I graduated high school and entered university, I followed this advice. First, I pursued veterinary science, because I loved animals. When that didn't feel right, I enrolled in my BA in Professional Writing and Publishing, because I loved reading. In hindsight, it was pretty naive of me. But there were elements from those studies that I enjoyed, and being able to reflect on what didn't work out helped me get to where I am now.
 
 I am lucky to have had both learning experiences. Memorising anatomy, physiological pathways, and medicines, taught me that I wanted to do something that involved more creativity and logic. My BA gave me the freedom to explore philosophy courses and mathematics in addition to professional writing. This felt closer to what I enjoy doing, and I am grateful to have then found a position as a transcriptionist.
 
