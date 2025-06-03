@@ -8,4 +8,8 @@ Hi, I'm Emma! Currently, I'm a student at the [University of New England](https:
 
 <br>
 
-Outside of work, I enjoy spending time with my partner and our cat, reading, and watching the latest episode of [Critical Role](https://critrole.com/).
+Outside of work, I enjoy spending time with my partner and our cat, playing Stardew Valley, and watching the latest episode of [Critical Role](https://critrole.com/).
+
+<br>
+
+Have a look at my latest projects [here](https://emoore29.github.io/projects).
