@@ -39,6 +39,16 @@ h6 {
   transition: var(--theme-transition);
 }
 
+.about-list {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--em-text);
+}
+
+.italics {
+  font-style: italic;
+}
+
 ol {
   color: var(--text);
 }
@@ -68,6 +78,12 @@ ul {
   font-size: 16px;
   color: var(--text);
   transition: var(--theme-transition);
+}
+
+summary {
+  color: var(--em-text);
+  cursor: pointer;
+  font-weight: 600;
 }
 
 a {
