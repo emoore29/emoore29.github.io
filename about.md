@@ -8,7 +8,7 @@ Hi, I'm Emma!
 
 <br>
 
-I'm a recent IT graduate looking to take the next step in my software development career. While I've worked primarily in court transcription for the last several years, I got into IT because I enjoy detailed problem solving, building useful tools, and constantly learning.
+I'm a recent IT graduate looking to take the next step in my career. I'm seeking roles where I can make a positive difference in the community. While I've worked primarily in court transcription for the last several years, I got into IT because I enjoy detailed problem solving, building useful tools, and constantly learning. I also enjoy writing high quality documentation and researching complex topics.
 
 <br>
 
@@ -31,10 +31,10 @@ Have a look at my latest projects [here](https://emoore29.github.io/projects).
   <summary>Graduate Diploma in IT (2024—2025)</summary>
   <br>
   <p>
-    <a href="https://www.une.edu.au/study/courses/graduate-diploma-in-information-technology" target="_blank">Coursework</a> focused on software, web, and app development. This included HTML, CSS, JavaScript, creating robust and flexible programs with Java and Object Oriented Programming principles, and a class-wide project incorporating Git and group collaboration.  
+    <a href="https://www.une.edu.au/study/courses/graduate-diploma-in-information-technology" target="_blank">Coursework</a> focused on software, web, and app development. This included HTML, CSS, JavaScript, creating robust and flexible programs with Java and object-oriented programming principles, and a class-wide project incorporating Git and group collaboration.  
   </p>
   <br>
-  <p>I supplemented the above with studies in Computer Networking, Parallel and Distributed Computing, Artificial Intelligence, and UI/UX.</p>
+  <p>I supplemented the above with studies in computer networking, parallel and distributed computing, artificial intelligence, and UI/UX.</p>
   <br>
   <h1 class="about-list">Programming Languages:</h1>
   <ul>
