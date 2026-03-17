@@ -11,6 +11,7 @@ html {
 html[data-theme="light"] {
   --grey: #575757;
   --background-color: #f8f8f8;
+  --project-card: #f1f1f1;
   --text: #000000bd;
   --em-text: #000000e1;
   --pink: #b93673;
@@ -19,6 +20,8 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
   --grey: #f8f8f8;
   --background-color: #1b1b1b;
+  --project-card: rgb(105, 105, 105);
+
   --text: #ffffffbd;
   --em-text: #ffffff;
   --pink: #b93673;
@@ -138,6 +141,15 @@ a#site-title-link {
   color: var(--em-text);
   text-decoration: none;
   transition: var(--theme-transition);
+}
+
+code {
+  display: block;
+  max-width: 100%;
+}
+
+.language-plaintext {
+  width: 100%;
 }
 
 .desktop-buttons {
