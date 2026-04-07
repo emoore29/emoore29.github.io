@@ -15,3 +15,5 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+google_analytics: G-6G4JV1E8YZ
